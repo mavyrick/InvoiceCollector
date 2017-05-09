@@ -1,0 +1,64 @@
+[04-May-2017 18:01:37 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Table 'myfr6168_dev002.vendor' doesn't exist
+	Query: SELECT `value` FROM `vendor` WHERE `id` = ? LIMIT 1
+	Line: /home/myfr6168/dev002.badiee.com/index.php (22)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 18:05:23 America/Toronto] PHP Catchable fatal error:  Object of class HowardSQL could not be converted to string in /home/myfr6168/dev002.badiee.com/index.php on line 115
+[04-May-2017 18:06:25 America/Toronto] PHP Catchable fatal error:  Object of class HowardSQL could not be converted to string in /home/myfr6168/dev002.badiee.com/index.php on line 115
+[04-May-2017 18:06:27 America/Toronto] PHP Catchable fatal error:  Object of class HowardSQL could not be converted to string in /home/myfr6168/dev002.badiee.com/index.php on line 115
+[04-May-2017 18:39:55 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:39:58 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:43:27 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:43:32 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:44:26 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:44:29 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:44:30 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:02 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:04 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:06 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:49 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:06:12 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:06:14 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:14:32 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT 'vendor_title' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:15:54 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:15:56 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:15:59 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:04 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:06 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:54 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT * FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:56 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT * FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:24:57 America/Toronto] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/myfr6168/dev002.badiee.com/index.php on line 28
+[04-May-2017 19:25:58 America/Toronto] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/myfr6168/dev002.badiee.com/index.php on line 28
+[04-May-2017 19:26:00 America/Toronto] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/myfr6168/dev002.badiee.com/index.php on line 28

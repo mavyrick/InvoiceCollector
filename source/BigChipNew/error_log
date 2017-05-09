@@ -1,0 +1,491 @@
+[04-May-2017 18:01:37 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Table 'myfr6168_dev002.vendor' doesn't exist
+	Query: SELECT `value` FROM `vendor` WHERE `id` = ? LIMIT 1
+	Line: /home/myfr6168/dev002.badiee.com/index.php (22)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 18:05:23 America/Toronto] PHP Catchable fatal error:  Object of class HowardSQL could not be converted to string in /home/myfr6168/dev002.badiee.com/index.php on line 115
+[04-May-2017 18:06:25 America/Toronto] PHP Catchable fatal error:  Object of class HowardSQL could not be converted to string in /home/myfr6168/dev002.badiee.com/index.php on line 115
+[04-May-2017 18:06:27 America/Toronto] PHP Catchable fatal error:  Object of class HowardSQL could not be converted to string in /home/myfr6168/dev002.badiee.com/index.php on line 115
+[04-May-2017 18:39:55 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:39:58 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:43:27 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:43:32 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:44:26 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:44:29 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 18:44:30 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:02 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:04 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:06 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:04:49 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:06:12 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:06:14 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 24
+[04-May-2017 19:14:32 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT 'vendor_title' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:15:54 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:15:56 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:15:59 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:04 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:06 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT '*' FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:54 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT * FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:16:56 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''vendors'' at line 1
+	Query: SELECT * FROM 'vendors'
+	Line: /home/myfr6168/dev002.badiee.com/index.php (31)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 19:24:57 America/Toronto] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/myfr6168/dev002.badiee.com/index.php on line 28
+[04-May-2017 19:25:58 America/Toronto] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/myfr6168/dev002.badiee.com/index.php on line 28
+[04-May-2017 19:26:00 America/Toronto] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/myfr6168/dev002.badiee.com/index.php on line 28
+[04-May-2017 19:54:58 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Unknown column '*' in 'field list'
+	Query: SELECT `*` FROM `vendors`
+	Line: /home/myfr6168/dev002.badiee.com/index.php (33)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[04-May-2017 20:04:53 America/Toronto] PHP Parse error:  syntax error, unexpected '<' in /home/myfr6168/dev002.badiee.com/index.php on line 103
+[04-May-2017 20:39:29 America/Toronto] PHP Parse error:  syntax error, unexpected '}' in /home/myfr6168/dev002.badiee.com/index.php on line 40
+[04-May-2017 21:31:14 America/Toronto] PHP Strict Standards:  Non-static method HowardSQL::Query() should not be called statically in /home/myfr6168/dev002.badiee.com/index.php on line 91
+[04-May-2017 21:31:14 America/Toronto] PHP Fatal error:  Using $this when not in object context in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 125
+[04-May-2017 21:38:49 America/Toronto] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 91
+[04-May-2017 21:38:49 America/Toronto] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 94
+[04-May-2017 21:38:49 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::Close() in /home/myfr6168/dev002.badiee.com/index.php on line 97
+[04-May-2017 21:39:49 America/Toronto] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 91
+[04-May-2017 21:39:49 America/Toronto] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 94
+[04-May-2017 21:39:49 America/Toronto] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 97
+[04-May-2017 21:40:07 America/Toronto] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 91
+[04-May-2017 21:40:07 America/Toronto] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 94
+[04-May-2017 21:40:07 America/Toronto] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, object given in /home/myfr6168/dev002.badiee.com/index.php on line 97
+[04-May-2017 23:13:57 America/Toronto] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/myfr6168/dev002.badiee.com/index.php on line 165
+[04-May-2017 23:16:22 America/Toronto] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/myfr6168/dev002.badiee.com/index.php on line 164
+[05-May-2017 00:39:25 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:40:46 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:40:54 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:41:47 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:41:55 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:43:04 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:43:08 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:44:26 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:44:30 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:44:42 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:44:46 America/Toronto] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 101
+[05-May-2017 00:53:12 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:53:12 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:53:12 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:53:12 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:53:12 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:55:03 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:55:03 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:55:03 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:55:03 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:55:03 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:45 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:45 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:45 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:45 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:45 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:50 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:50 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:50 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:50 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:56:50 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:57:11 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:57:11 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:57:11 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:57:11 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 00:57:11 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:02:41 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:02:41 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:02:41 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:02:41 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:02:41 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:03:07 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:03:07 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:03:07 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:03:07 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:03:07 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 82
+[05-May-2017 01:06:54 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 84
+[05-May-2017 01:08:10 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 84
+[05-May-2017 01:09:32 America/Toronto] PHP Parse error:  syntax error, unexpected '$total' (T_VARIABLE) in /home/myfr6168/dev002.badiee.com/index.php on line 87
+[05-May-2017 01:10:10 America/Toronto] PHP Parse error:  syntax error, unexpected '$total' (T_VARIABLE) in /home/myfr6168/dev002.badiee.com/index.php on line 87
+[05-May-2017 01:10:28 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:28 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:28 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:28 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:28 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:42 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:42 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:42 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:42 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:10:42 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:38 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:38 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:38 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:38 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:38 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:56 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:56 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:56 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:56 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:13:56 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:32 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:32 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:32 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:32 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:32 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:56 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:56 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:56 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:56 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:14:56 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Warning:  Illegal string offset 'pst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Warning:  Illegal string offset 'subtotal' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Warning:  Illegal string offset 'gst' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Warning:  Illegal string offset 'total' in /home/myfr6168/dev002.badiee.com/index.php on line 85
+[05-May-2017 01:18:04 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0ELECT * FROM `invoices`' at line 1
+	Query: 0ELECT * FROM `invoices`
+	Line: /home/myfr6168/dev002.badiee.com/index.php (141)
+	Line:  ()
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[05-May-2017 15:08:59 America/Toronto] PHP Parse error:  syntax error, unexpected 'Record' (T_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 110
+[05-May-2017 15:11:01 America/Toronto] PHP Parse error:  syntax error, unexpected 'Record' (T_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 110
+[05-May-2017 15:11:10 America/Toronto] PHP Parse error:  syntax error, unexpected 'Record' (T_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 110
+[05-May-2017 15:12:23 America/Toronto] PHP Parse error:  syntax error, unexpected 'Record' (T_STRING) in /home/myfr6168/dev002.badiee.com/index.php on line 110
+[05-May-2017 19:08:13 America/Toronto] PHP Parse error:  syntax error, unexpected '}' in /home/myfr6168/dev002.badiee.com/index.php on line 244
+[05-May-2017 19:28:24 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:28:33 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:30:15 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:30:19 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 273
+[05-May-2017 19:32:27 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 273
+[05-May-2017 19:32:31 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:34:30 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:37:21 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:38:02 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 19:38:07 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 23
+[05-May-2017 20:20:42 America/Toronto] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 232
+[05-May-2017 20:20:42 America/Toronto] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 235
+[05-May-2017 20:20:42 America/Toronto] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 238
+[05-May-2017 20:20:55 America/Toronto] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 232
+[05-May-2017 20:20:55 America/Toronto] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 235
+[05-May-2017 20:20:55 America/Toronto] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 238
+[05-May-2017 20:23:08 America/Toronto] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 232
+[05-May-2017 20:23:08 America/Toronto] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 235
+[05-May-2017 20:23:08 America/Toronto] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 238
+[05-May-2017 20:23:18 America/Toronto] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 232
+[05-May-2017 20:23:18 America/Toronto] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 235
+[05-May-2017 20:23:18 America/Toronto] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home/myfr6168/dev002.badiee.com/index.php on line 238
+[05-May-2017 20:37:15 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 20:37:58 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 20:38:03 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 20:38:06 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 20:38:10 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 20:40:06 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 20:40:33 America/Toronto] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/myfr6168/dev002.badiee.com/index.php on line 240
+[05-May-2017 22:32:08 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 127
+[05-May-2017 22:32:15 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 127
+[05-May-2017 22:32:42 America/Toronto] PHP Fatal error:  Call to a member function prepare() on null in /home/myfr6168/dev002.badiee.com/index.php on line 127
+[06-May-2017 03:19:50 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/config.php on line 8
+[06-May-2017 03:26:40 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/config.php on line 8
+[06-May-2017 03:26:50 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/config.php on line 8
+[06-May-2017 03:27:59 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/config.php:6) in /home/myfr6168/dev002.badiee.com/config.php on line 8
+[06-May-2017 03:29:45 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/config.php on line 8
+[06-May-2017 03:32:13 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 03:37:45 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 03:39:27 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 03:42:32 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 03:43:25 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 03:45:22 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 3
+[06-May-2017 03:45:25 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 3
+[06-May-2017 03:46:41 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 197
+[06-May-2017 03:51:11 America/Toronto] PHP Warning:  include(/source/config.php): failed to open stream: No such file or directory in /home/myfr6168/dev002.badiee.com/response.php on line 4
+[06-May-2017 03:51:11 America/Toronto] PHP Warning:  include(): Failed opening '/source/config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myfr6168/dev002.badiee.com/response.php on line 4
+[06-May-2017 03:51:11 America/Toronto] PHP Warning:  include(/index.php): failed to open stream: No such file or directory in /home/myfr6168/dev002.badiee.com/response.php on line 5
+[06-May-2017 03:51:11 America/Toronto] PHP Warning:  include(): Failed opening '/index.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myfr6168/dev002.badiee.com/response.php on line 5
+[06-May-2017 03:54:22 America/Toronto] PHP Warning:  include(/source/config.php): failed to open stream: No such file or directory in /home/myfr6168/dev002.badiee.com/response.php on line 4
+[06-May-2017 03:54:22 America/Toronto] PHP Warning:  include(): Failed opening '/source/config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myfr6168/dev002.badiee.com/response.php on line 4
+[06-May-2017 03:54:22 America/Toronto] PHP Warning:  include(/index.php): failed to open stream: No such file or directory in /home/myfr6168/dev002.badiee.com/response.php on line 5
+[06-May-2017 03:54:22 America/Toronto] PHP Warning:  include(): Failed opening '/index.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myfr6168/dev002.badiee.com/response.php on line 5
+[06-May-2017 03:56:45 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:03:29 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:05:41 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:10:18 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:10:20 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:27:12 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:32:08 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:33:31 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:33:35 America/Toronto] PHP Fatal error:  Cannot redeclare db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:48:54 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 197
+[06-May-2017 04:50:14 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 197
+[06-May-2017 04:50:18 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 197
+[06-May-2017 04:51:06 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 04:54:40 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 05:00:00 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 05:06:17 America/Toronto] PHP Fatal error:  Call to undefined function get_db_conn() in /home/myfr6168/dev002.badiee.com/index.php on line 57
+[06-May-2017 05:13:38 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 05:15:13 America/Toronto] PHP Fatal error:  Cannot redeclare get_db_conn() (previously declared in /home/myfr6168/dev002.badiee.com/source/config.php:6) in /home/myfr6168/dev002.badiee.com/source/config.php on line 8
+[06-May-2017 15:56:35 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 15:57:12 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 15:57:54 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 15:58:24 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 15:58:27 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 15:58:36 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 16:08:15 America/Toronto] PHP Fatal error:  Class 'HowardSQL' not found in /home/myfr6168/dev002.badiee.com/source/config.php on line 6
+[06-May-2017 16:12:13 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/database.class.php on line 197
+[06-May-2017 16:13:51 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/database.class.php on line 197
+[06-May-2017 16:17:00 America/Toronto] PHP Fatal error:  Cannot redeclare class HowardSQL in /home/myfr6168/dev002.badiee.com/database.class.php on line 197
+[06-May-2017 16:25:24 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Table 'myfr6168_dev002.add_delete_record' doesn't exist
+	Query: INSERT INTO add_delete_record(content) VALUES('')
+	Line: /home/myfr6168/dev002.badiee.com/source/database.class.php (130)
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24)
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[06-May-2017 16:25:24 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002), but the query could not be prepared.  Make sure your MySQL and PHP versions are up to date and meet requirements.
+	Query: INSERT INTO add_delete_record(content) VALUES('')
+	Error: Table 'myfr6168_dev002.add_delete_record' doesn't exist
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 148
+[06-May-2017 16:25:24 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:116) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:31:05 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Table 'myfr6168_dev002.add_delete_record' doesn't exist
+	Query: INSERT INTO add_delete_record(content) VALUES('')
+	Line: /home/myfr6168/dev002.badiee.com/source/database.class.php (130)
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24)
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[06-May-2017 16:31:05 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002), but the query could not be prepared.  Make sure your MySQL and PHP versions are up to date and meet requirements.
+	Query: INSERT INTO add_delete_record(content) VALUES('')
+	Error: Table 'myfr6168_dev002.add_delete_record' doesn't exist
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 148
+[06-May-2017 16:31:05 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:116) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:38:50 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Column count doesn't match value count at row 1
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst, total) VALUES('', '', '', '', '', '')
+	Line: /home/myfr6168/dev002.badiee.com/source/database.class.php (130)
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24)
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[06-May-2017 16:38:50 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002), but the query could not be prepared.  Make sure your MySQL and PHP versions are up to date and meet requirements.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst, total) VALUES('', '', '', '', '', '')
+	Error: Column count doesn't match value count at row 1
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 148
+[06-May-2017 16:38:50 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:116) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:41:09 America/Toronto] PHP Notice:  MySQL PDO Prepare Error: Column count doesn't match value count at row 1
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst, total) VALUES('', '', '', '', '', '')
+	Line: /home/myfr6168/dev002.badiee.com/source/database.class.php (130)
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24)
+	Line:  () in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 116
+[06-May-2017 16:41:09 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002), but the query could not be prepared.  Make sure your MySQL and PHP versions are up to date and meet requirements.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst, total) VALUES('', '', '', '', '', '')
+	Error: Column count doesn't match value count at row 1
+	Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 148
+[06-May-2017 16:41:09 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:116) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:43:20 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 16:45:29 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES('', '', '', '', '', '')
+		Error:Duplicate entry '0' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 16:45:29 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:47:55 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES('', '', '', '', '', '')
+		Error:Duplicate entry '0' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 16:47:55 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:48:38 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 16:51:29 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES('', '', '', '', '', '')
+		Error:Duplicate entry '0' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 16:51:29 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:53:27 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('', '', '', '', '', '')
+		Error:Duplicate entry '0' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 16:53:27 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 16:56:48 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 16:58:44 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 17:03:58 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('55555-05-05', '55', 'Browns Social House', '55', '55', '55')
+		Error:Duplicate entry '55' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:03:58 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:04:05 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('55555-05-05', '55', 'Browns Social House', '55', '55', '55')
+		Error:Duplicate entry '55' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:04:05 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:04:08 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('55555-05-05', '55', 'Browns Social House', '55', '55', '55')
+		Error:Duplicate entry '55' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:04:08 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:43:26 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 17:45:20 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 17:46:54 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('222222-02-22', '2222222222', 'Browns Social House', '22', '2', '2')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:46:54 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:46:58 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('222222-02-22', '2222222222', 'Browns Social House', '22', '2', '2')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:46:58 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:47:15 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('222222-02-22', '2222222222', 'Browns Social House', '22', '2', '2')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:47:15 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:47:21 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('222222-02-22', '222222225522', 'Browns Social House', '22', '2', '2')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:47:21 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:53:56 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 17:53:58 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('2017-05-25', '2345', 'Browns Social House', '2000', '25', '25')
+		Error:Duplicate entry '2345' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:53:58 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:53:59 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('2017-05-25', '2345', 'Browns Social House', '2000', '25', '25')
+		Error:Duplicate entry '2345' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:53:59 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:54:00 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('2017-05-25', '2345', 'Browns Social House', '2000', '25', '25')
+		Error:Duplicate entry '2345' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:54:00 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:54:02 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('2017-05-25', '2345', 'Browns Social House', '2000', '25', '25')
+		Error:Duplicate entry '2345' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:54:02 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:54:02 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('2017-05-25', '2345', 'Browns Social House', '2000', '25', '25')
+		Error:Duplicate entry '2345' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:54:02 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:54:37 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('2017-05-25', '2345', 'Browns Social House', '2000', '25', '25')
+		Error:Duplicate entry '2345' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 17:54:37 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 17:54:57 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 18:04:52 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 18:04:55 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('77777-07-31', '77777', 'Browns Social House', '77', '7', '7')
+		Error:Duplicate entry '77777' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 18:04:55 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 18:12:22 America/Toronto] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/myfr6168/dev002.badiee.com/index.php on line 173
+[06-May-2017 18:12:22 America/Toronto] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myfr6168/dev002.badiee.com/index.php on line 173
+[06-May-2017 18:12:22 America/Toronto] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/myfr6168/dev002.badiee.com/index.php on line 178
+[06-May-2017 18:13:38 America/Toronto] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/myfr6168/dev002.badiee.com/index.php on line 173
+[06-May-2017 18:13:38 America/Toronto] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myfr6168/dev002.badiee.com/index.php on line 173
+[06-May-2017 18:13:38 America/Toronto] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/myfr6168/dev002.badiee.com/index.php on line 178
+[06-May-2017 18:13:41 America/Toronto] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/myfr6168/dev002.badiee.com/index.php on line 178
+[06-May-2017 18:17:20 America/Toronto] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/myfr6168/dev002.badiee.com/index.php on line 178
+[06-May-2017 18:17:26 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 285
+[06-May-2017 18:19:15 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 285
+[06-May-2017 18:19:18 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 285
+[06-May-2017 18:19:21 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 284
+[06-May-2017 18:19:28 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 284
+[06-May-2017 18:20:52 America/Toronto] PHP Parse error:  syntax error, unexpected end of file in /home/myfr6168/dev002.badiee.com/index.php on line 284
+[06-May-2017 18:20:56 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/index.php on line 187
+[06-May-2017 18:21:27 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 18:21:32 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/index.php on line 187
+[06-May-2017 18:22:56 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 18:23:13 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 18:46:28 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/index.php on line 187
+[06-May-2017 18:46:59 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 18:47:07 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('222222-02-22', '275', 'Browns Social House', '250', '25', '25')
+		Error:Duplicate entry '275' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 18:47:07 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 18:47:08 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('222222-02-22', '275', 'Browns Social House', '250', '25', '25')
+		Error:Duplicate entry '275' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 18:47:08 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 18:59:27 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 19:01:04 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:04 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:01:05 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:05 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:01:05 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:05 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:01:05 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:05 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:01:05 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:05 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:01:06 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:06 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:01:06 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('41232-12-31', '234523545243', 'Browns Social House', '243554322534', '234', '4235432')
+		Error:Duplicate entry '2147483647' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:01:06 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:03:33 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 19:21:48 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 19:23:58 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
+[06-May-2017 19:24:10 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('123321-12-13', '123123', 'Browns Social House', '2313213', '243', '132')
+		Error:Duplicate entry '123123' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:24:10 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:24:10 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('123321-12-13', '123123', 'Browns Social House', '2313213', '243', '132')
+		Error:Duplicate entry '123123' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:24:10 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:24:12 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('123321-12-13', '123123', 'Browns Social House', '2313213', '243', '132')
+		Error:Duplicate entry '123123' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:24:12 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:24:13 America/Toronto] PHP Notice:  The MySQL connection was established (localhost / myfr6168_dev002) , and a query prepared, but the query could not be executed.
+	Query: INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst) VALUES ('123321-12-13', '123123', 'Browns Social House', '2313213', '243', '132')
+		Error:Duplicate entry '123123' for key 'PRIMARY'
+		Line: /home/myfr6168/dev002.badiee.com/response.php (24) in /home/myfr6168/dev002.badiee.com/source/database.class.php on line 140
+[06-May-2017 19:24:13 America/Toronto] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/myfr6168/dev002.badiee.com/source/database.class.php:140) in /home/myfr6168/dev002.badiee.com/response.php on line 40
+[06-May-2017 19:24:36 America/Toronto] PHP Fatal error:  Call to undefined method HowardSQL::close() in /home/myfr6168/dev002.badiee.com/response.php on line 35
