@@ -1,5 +1,6 @@
 <?php
 session_start();
+sdfdf
 ?>
 
 <!DOCTYPE html>
@@ -231,6 +232,20 @@ $stmt = null;
 ?>
 
 <script>
+$(document).ready(function() {
+$.ajax({
+type: "POST",
+url: "response.php",
+dataType: "text",
+data: $('#collection_form').serialize(),
+success:function(response){
+
+	var invoice_dup = "<? echo $_SESSION["duplicate"]; ?>";
+
+	if(invoice_dup.length > 0) {
+		alert("Invoice number already exists.");
+
+	};
 
 $(document).ready(function() {
 	<?
@@ -284,10 +299,10 @@ $(document).ready(function() {
 
 							var invoice_dup = "<? echo $_SESSION["duplicate"]; ?>";
 
-							// if(invoice_dup.length > 0) {
-							// 	alert("Invoice number already exists.");
-							//
-							// };
+							if(invoice_dup.length > 0) {
+								alert("Invoice number already exists.");
+
+							};
 
 							var total = (parseFloat($("#subtotal").val()) + (parseFloat($("#pst").val())/100 * parseFloat($("#subtotal").val())) + (parseFloat($("#gst").val())/100 * parseFloat($("#subtotal").val()))).toFixed(2);
 
