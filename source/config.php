@@ -9,7 +9,7 @@
 	// } -->
 <?php
 
-function get_db_conn() {
+// function get_db_conn() {
 
 $url = parse_url(getenv("mysql://b89d1d0d390de1:cf33d27f@us-cdbr-iron-east-03.cleardb.net/heroku_f99b13abac46a60?reconnect=true"));
 
@@ -18,8 +18,8 @@ $username = $url["b89d1d0d390de1"];
 $password = $url["cf33d27f"];
 $db = substr($url["heroku_f99b13abac46a60"], 1);
 
-$conn = new mysqli($server, $username, $password, $db);
+$sql = new mysqli($server, $username, $password, $db);
 
-return $conn;
+// return $conn;
 
 ?>
