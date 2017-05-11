@@ -2,6 +2,7 @@
 session_start();
 
 include_once("source/config.php");
+include_once("database.class.php");
 
 $sql = get_db_conn();
 

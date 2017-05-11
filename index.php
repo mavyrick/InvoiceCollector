@@ -86,7 +86,7 @@ th {
 
 <?
 
-			include "source/database.class.php";
+			include "database.class.php";
 			include "source/config.php";
 			include "response.php";
 
