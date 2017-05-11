@@ -25,4 +25,6 @@ $conn = HowardSQL::Connect($server, $username, $password, $db);
 
 return $conn;
 
+};
+
 ?>
