@@ -1,6 +1,6 @@
 <?php
 session_start();
-sdfdf
+"test"
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ th {
 			include "source/config.php";
 			include "response.php";
 
-			$sql = get_db_conn();
+			// $sql = get_db_conn();
 
 			$vendor_data = "SELECT * FROM `vendors`";
 
