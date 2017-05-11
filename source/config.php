@@ -15,10 +15,10 @@ function get_db_conn() {
 
 $url = parse_url(getenv("DATABASE_URL"));
 
-$server = $url["us-cdbr-iron-east-03.cleardb.net"];
-$username = $url["b89d1d0d390de1"];
-$password = $url["cf33d27f"];
-$db = substr($url["heroku_f99b13abac46a60"], 1);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
 // $conn = new mysqli($server, $username, $password, $db);
 $conn = HowardSQL::Connect($server, $username, $password, $db);
