@@ -25,9 +25,9 @@ $db = substr($url["path"], 1);
 // $conn = new mysqli($server, $username, $password, $db);
 // $conn = new PDO("mysql:host=127.0.0.1", "root", "root", "sys");
 
-$conn = new PDO("mysql:host=$server;dbname=$db", $username, $password);
+// $conn = new PDO("mysql:host=$server;dbname=$db", $username, $password);
 
-// $conn = new PDO("mysql:host=127.0.0.1;dbname=sys", "root", "root");
+$conn = new PDO("mysql:host=127.0.0.1;dbname=sys", "root", "root");
 
 return $conn;
 

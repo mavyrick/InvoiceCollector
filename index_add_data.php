@@ -298,9 +298,9 @@ $(document).ready(function() {
 
 						?>
 													$("#data_table_entry").prepend("<?	echo "<tr id=" . "row_" . $i["id"] . ">";
-																											echo "<td>" . $i["invoice_date"] . "</td>";
-																											echo "<td>" . $i["invoice_number"] . "</td>";
-																											echo "<td>" . $i["vendor"] . "</td>";
+																											echo "<td>" . $data["invoice_date"] . "</td>";
+																											echo "<td>" . $data["invoice_number"] . "</td>";
+																											echo "<td>" . $data["vendor"] . "</td>";
 																											echo "<td>" . "$" . number_format((float)$i["subtotal"], 2, '.', '') . "</td>";
 																											echo "<td>" . "$" . number_format((float)$i["total"], 2, '.', '') . "</td>";
 																											echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id=" . $i["id"] . ">" . "</td>";
