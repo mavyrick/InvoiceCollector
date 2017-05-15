@@ -229,7 +229,7 @@ $(document).ready(function() {
 			$stmt = null;
 	?>
 
-	$('#invoice_number').keyup(function(e){
+	$('#invoice_number').change(function(e){
 					e.preventDefault();
 
 		var invoice_num = $('#invoice_number').val();
@@ -241,9 +241,7 @@ $(document).ready(function() {
 		data: $('#collection_form').serialize(),
 		success:function(response){
 			if (response == "duplicate"){
-				$('#invoice_number').change(function(){
-					$(this).addClass("errorClass");
-			});
+					$('#invoice_number').addClass("errorClass");
 		}
 			else
 		{
