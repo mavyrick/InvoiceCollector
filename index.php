@@ -244,6 +244,7 @@ $(document).ready(function() {
 					$('#invoice_number').addClass("errorClass");
 		}
 			else
+					$('#invoice_number').removeClass("errorClass");
 		{
 			// $('#invoice_number').change(function(){
 			// 	$(this).addClass("okClass");
