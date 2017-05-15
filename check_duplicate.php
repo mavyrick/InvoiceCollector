@@ -2,6 +2,14 @@
 session_start();
 
 // $conn = new PDO("mysql:host=127.0.0.1;dbname=sys", "root", "root");
+
+$url = parse_url(getenv("DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
 $conn = new PDO("mysql:host=$server;dbname=$db", $username, $password);
 
 
