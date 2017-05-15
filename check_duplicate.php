@@ -33,7 +33,7 @@ $invoice_number_data = filter_var($_POST["invoice_number"],FILTER_SANITIZE_NUMBE
 // foreach ($data as $i) {
 
 
-if ($stmt = $sql->prepare("SELECT 'invoice_number' FROM `invoices` WHERE `invoice_number` = $invoice_number_data") AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
+if ($stmt = $conn->prepare("SELECT 'invoice_number' FROM `invoices` WHERE `invoice_number` = $invoice_number_data") AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
 
   if ($data >= 0) {
 
