@@ -4,9 +4,9 @@
 		BADIEE.OS Database class file
 			Database access and query handler
 			for all instalments of BADIEE.OS
-			
+
 			!! This file should not be modified !!
-			
+
 		Author: Brian Howard
 		Revision Date: May 27, 2012
 		################################################  */
@@ -23,13 +23,13 @@ class HowardSQL extends PDO {
 	var $RowDataEx = array();
 	var $RowCountEx = array();
 	var $NextRowNumberEx = array();
-	
+
 	public static $recent = null;
 	public static $totalconnections = 0;
 	public static $host;
-	
+
 	public static $database = array();
-	
+
 	protected static $dbconn = array();
 
 	function __construct($host, $user, $pass, $database="") {
@@ -38,10 +38,10 @@ class HowardSQL extends PDO {
 			$dsn = "mysql:host=" . $host . ";dbname=" . $database;
 			try {
 					self::$totalconnections++;
-					
+
 					return parent::__construct($dsn, $user, $pass);
 
-				
+
 
 			}
 			catch(PDOException $dbError) {
@@ -56,25 +56,25 @@ class HowardSQL extends PDO {
 			return false;
 		}
 	}
-	
-	public static function Connect($host, $user, $pass, $database) {		
-		if (!in_array($database, self::$database)) {		
+
+	public static function Connect($host, $user, $pass, $database) {
+		if (!in_array($database, self::$database)) {
 			if ($newconn = new HowardSQL($host, $user, $pass, $database)) {
-			
+
 				//Assign instance number to new connection
 				self::$dbconn[$database] = $newconn;
 				$newconn->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-				
+
 				self::$database[] = $database;
 				self::$recent = $database;
 				self::$host = $host;
-				
+
 				$newconn->query("SET time_zone = '+00:00';");
-				
+
 				if (isset($_SESSION["uid"]) AND is_numeric($_SESSION["uid"])) {
 					$newconn->query("SET @myUserId:=" . $_SESSION["uid"] . ";");
 				}
-				
+
 				return $newconn;
 			}
 			else {
@@ -82,8 +82,8 @@ class HowardSQL extends PDO {
 				//exit();
 				return false;
 			}
-				
-		}		
+
+		}
 		else {
 			//Find connection
 			if (self::$dbconn[$database]) {
@@ -96,14 +96,14 @@ class HowardSQL extends PDO {
 			}
 		}
 	}
-	
+
 	private function GetLastConn() {
-	
+
 		if (isset(self::$recent)) return self::$dbconn[self::$recent];
 		else return false;
-	
+
 	}
-	
+
 	function prepare($querystr, $options = array()) {
 
 		if ($sth = parent::prepare($querystr)) {
@@ -116,19 +116,19 @@ class HowardSQL extends PDO {
 			trigger_error("MySQL PDO Prepare Error: " . $arr[2] . "\n\tQuery: " . $querystr . "\n\tLine: " . $trace[0]['file'] . " (" . $trace[0]['line'] . ")\n\tLine: " . $trace[1]['file'] . " (" . $trace[1]['line'] . ")\n\tLine: " . $trace[2]['file'] . " (" . $trace[2]['line'] . ")");
 			return false;
 		}
-	
+
 	}
 
-	
+
 	function Query($querystr) {
-	
+
 		if ($sql = $this->GetLastConn()) {
 			//Reset pointer to 0
 			$this->NextRowNumber = 0;
-			
+
 			//Run the statement
 			if ($sth = $sql::prepare($querystr)) {
-				if ($sth->execute()) {		
+				if ($sth->execute()) {
 					$this->_qresult = $sth->fetchAll();
 					$this->RowCount = $sth->rowCount();
 					return true;
@@ -154,7 +154,7 @@ class HowardSQL extends PDO {
 			return false;
 		}
 	}
-	
+
 	function ReadRow() {
 		if (isset($this->_qresult[$this->NextRowNumber])) {
 			if ($this->RowData = $this->_qresult[$this->NextRowNumber]) {
@@ -165,17 +165,17 @@ class HowardSQL extends PDO {
 		}
 		else return false;
 	}
-	
+
 	function ReadRowAsObj() {
 		return parent::fetch_object ($this->_qresult);
 	}
-	
+
 
 	function NumberRows() {
 		if ($this->RowCount > 0) return $this->RowCount;
 		else return false;
 	}
-	
+
 	function ShowSetValues( $table , $field ){
 		$query = "SHOW COLUMNS FROM `$table` LIKE '$field'";
 		$result = parent::query($query) or die( 'Error getting Enum/Set field ' . mysqli_error() );

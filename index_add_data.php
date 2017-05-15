@@ -102,7 +102,7 @@ th {
 
 			$vendor_data = "SELECT * FROM `vendors`";
 
-			$invoice_data = "SELECT * FROM `invoices`";
+			$invoice_data = "SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1";
 
 			$last_id = "SELECT `id` FROM `invoices` ORDER BY `id` DESC LIMIT 1";
 
@@ -293,14 +293,21 @@ $(document).ready(function() {
 							// 	var delete_data = "<td><form><input type='submit' value='Delete' id='<echo $data["id"];?>'class='del_button btn btn-danger btn-sm' </form></td>";
 							// <}>
 
-											$("#data_table_entry").prepend("<tr>" +
-																							"<td>" + $("#invoice_date").val() + "</td>" +
-																							"<td>" + $("#invoice_number").val() + "</td>" +
-																							"<td>" + $("#vendor").val() + "</td>" +
-																							"<td>" + "$" + parseFloat($("#subtotal").val()).toFixed(2) + "</td>" +
-																							"<td>" + "$" + total + "</td>" +
-																							"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' </form></td>" +
-																							"</tr>");
+							<?
+									if ($stmt = $sql->prepare($invoice_data) AND $stmt->execute(array()) AND $data = $stmt->fetch()) {
+
+						?>
+													$("#data_table_entry").prepend("<?	echo "<tr id=" . "row_" . $i["id"] . ">";
+																											echo "<td>" . $i["invoice_date"] . "</td>";
+																											echo "<td>" . $i["invoice_number"] . "</td>";
+																											echo "<td>" . $i["vendor"] . "</td>";
+																											echo "<td>" . "$" . number_format((float)$i["subtotal"], 2, '.', '') . "</td>";
+																											echo "<td>" . "$" . number_format((float)$i["total"], 2, '.', '') . "</td>";
+																											echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id=" . $i["id"] . ">" . "</td>";
+																											echo "</tr>"; ?>");
+
+																										}
+							<?
 
             // error:function(xhr, ajaxOptions, thrownError){
             //     alert(thrownError);

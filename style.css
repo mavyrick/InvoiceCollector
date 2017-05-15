@@ -1,7 +1,67 @@
 /*body {
-  background-color: grey;
+	font-family: arial;
 }
 
-form {
-  font-size: 25px;
+#collection_form {
+  font-size: 20px;
+}
+
+#title {
+	font-family: "arial";
+	font-size: 50px;
+	font-weight: bold;
+	background-color: lightblue;
+	border-radius: 15px;
+	padding: 10px;
+	margin: auto;
+	width: 50%;
+	margin-top: 15px;
+
+}
+
+#collector {
+	position: fixed;
+	left: 3%;
+	top: 20%;
+	background-color: lightgrey;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+#list {
+	padding-top: 25px;
+	padding-right: 3%;
+}
+
+#data_table {
+	border: 1px solid black;
+}
+
+td {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+th {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.del_button {
+	margin: 1px;
+}
+
+#all_invoices {
+	border-radius: 15px;
+	padding: 10px;
+	background-color: palegreen;
+	font-weight: bold;
+}
+
+#invoice_title {
+	font-weight: bold;
+}
+
+.form-control {
+	width: 80%;
 }*/

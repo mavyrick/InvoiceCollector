@@ -115,18 +115,8 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
     //
     // echo $count;
 
-    $_SESSION["duplicate"] = "";
 
-    if ($stmt = $sql->prepare("SELECT `invoice_number` FROM `invoices` WHERE `invoice_number` = $invoice_number_data ") AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
-
-    					if (count($data) > 0)
-    						{
-    							$_SESSION["duplicate"] = "duplicate";
-    						}
-
-    			}
     	}
-
 
 if(isset($_POST["recordToDelete"]) && strlen($_POST["recordToDelete"])>0 && is_numeric($_POST["recordToDelete"]))
 {
