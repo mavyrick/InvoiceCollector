@@ -40,7 +40,6 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
     $gst_save = filter_var($_POST["gst"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
     $total_save = $subtotal_save + ($pst_save/100 * $subtotal_save) + ($gst_save/100 * $subtotal_save);
 
-
   //  {
   //      echo('NUMBER_AVAILABLE');
   //  }
@@ -63,9 +62,34 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
 
     $insert_row = $sql->query("INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst, total) VALUES ('$invoice_date_save', '$invoice_number_save', '$vendor_save', '$subtotal_save', '$pst_save', '$gst_save', '$total_save')");
 
+    // $stmt->bindParam(":ename", $invoice_date_save);
+    // $stmt->bindParam(":edept", $invoice_number_save);
+    // $stmt->bindParam(":esalary", $vendor_save);
+    // $stmt->bindParam(":ename", $subtotal_save);
+    // $stmt->bindParam(":edept", $pst_save);
+    // $stmt->bindParam(":esalary", $gst_save);
+    // $stmt->bindParam(":ename", $total);
+    // $stmt->bindParam(":edept", $total_save);
+
     if($insert_row)
     {
-          $my_id = $sql->insert_id;
+
+        header('Content-Type: application/json');
+
+
+          echo json_encode(array( 'invoice_date' => $invoice_date_save,
+                                                      'invoice_number' => $invoice_number_save,
+                                                      'vendor' => $vendor_save,
+                                                      'subtotal' => $subtotal_save,
+                                                      'pst' => $pst_save,
+                                                      'gst' => $gst_save,
+                                                      'total' => $total_save,
+                                                    ));
+
+
+        $my_id = $sql->insert_id;
+
+        exit();
 
     }else{
 

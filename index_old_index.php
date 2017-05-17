@@ -49,24 +49,16 @@ body {
 
 #data_table {
 	border: 1px solid black;
-	display: table-header-group;
 }
 
 td {
-	padding-left: 12px;
-	padding-right: 12px;
-	border: solid lightgrey 1px;
-	vertical-align: middle;
-	text-align: center;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 th {
-	font-size: 20px;
-	padding-left: 12px;
-	padding-right: 12px;
-	border: solid lightgrey 1px;
-	vertical-align: middle;
-	text-align: center;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .del_button {
@@ -96,24 +88,13 @@ th {
 	border: 2px solid green;
 }
 
-#error {
-	float: right;
-	font-size: 15px;
-	color: white;
-	background-color: red;
-	padding: 1px;
-	border-radius: 4px;
-	position: relative;
-	top: 10px;
-}
-
 </style>
 	</head>
 	<body>
 
 <?
 
-			// include "source/database.class.php";
+			include "source/database.class.php";
 			include "source/config.php";
 			include "response.php";
 
@@ -121,13 +102,11 @@ th {
 
 			$vendor_data = "SELECT * FROM `vendors`";
 
-			$invoice_data = "SELECT * FROM `invoices` ORDER BY `id` ASC";
+			$invoice_data = "SELECT * FROM `invoices`";
 
 			$last_id = "SELECT `id` FROM `invoices` ORDER BY `id` DESC LIMIT 1";
 
 			$last_entry = "SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1";
-
-			// $last_entry = "SELECT * FROM `invoices` where id=(SELECT max(id) FROM `invoices`)";
 
 			$stmt = null;
 
@@ -193,8 +172,6 @@ th {
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
 			<input type="submit" value="Submit" name="submit" id="submit" class="btn btn-primary btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-			<div id="error">
-			</div>
     </div>
   </div>
 
@@ -210,7 +187,7 @@ th {
 
 		<br>
 
-		<!-- <table id="headers" class="table">
+		<table id="headers" class="table">
   	<tr>
 	    <th>Date</th>
 	    <th>Invoice Number</th>
@@ -219,7 +196,7 @@ th {
 			<th>Total</th>
 			<th>Delete</th>
 		</tr>
-	</table> -->
+	</table>
 
 	<table id="data_table" class="table">
 		<div id="data_table_entry">
@@ -233,7 +210,6 @@ th {
 <script>
 
 $(document).ready(function() {
-
 	<?
 			if ($stmt = $sql->prepare($invoice_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
 				foreach ($data as $i) {
@@ -255,9 +231,7 @@ $(document).ready(function() {
 			$stmt = null;
 	?>
 
-	$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>");
-
-	$('#invoice_number').change(function(e){
+	$('#invoice_number').keyup(function(e){
 					e.preventDefault();
 
 		var invoice_num = $('#invoice_number').val();
@@ -269,13 +243,11 @@ $(document).ready(function() {
 		data: $('#collection_form').serialize(),
 		success:function(response){
 			if (response == "duplicate"){
-					$('#invoice_number').addClass("errorClass");
-					$('#submit').click(function(){
-						$('#error').append("<p>Invoice number already taken.</p>");
-					});
+				$('#invoice_number').change(function(){
+					$(this).addClass("errorClass");
+			});
 		}
 			else
-					$('#invoice_number').removeClass("errorClass");
 		{
 			// $('#invoice_number').change(function(){
 			// 	$(this).addClass("okClass");
@@ -298,19 +270,16 @@ $(document).ready(function() {
 
 });
 
-
-
-    $("#submit").on("click", function(e){
+    $("#collection_form").on("submit", function(e){
             e.preventDefault();
-
-
 
             if(($("#invoice_number").val()==='') || ($("#invoice_date").val()==='') || ($("#vendor").val()==='') || ($("#subtotal").val()==='') || ($("#pst").val()==='') || ($("#pst").val()===''))
             {
-                $("#error").append("You left a field blank.");
+                alert("You left a field blank.");
                 return false;
             };
 
+							$("#invoice_number").removeClass("errorClass");
 
 							var invoice_num = $('#invoice_number').val();
 							$.ajax({
@@ -318,140 +287,38 @@ $(document).ready(function() {
 							url: 'response.php',
 							dataType: "text",
 							data: $('#collection_form').serialize(),
-							success: function(data) {
+							success: function(response){
 
-								$("#headers").remove();
+							var total = (parseFloat($("#subtotal").val()) + (parseFloat($("#pst").val())/100 * parseFloat($("#subtotal").val())) + (parseFloat($("#gst").val())/100 * parseFloat($("#subtotal").val()))).toFixed(2);
 
-							$("#invoice_number").removeClass("errorClass");
+							<? if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
+								foreach ($data as $i) { ?>
 
-								var total = (parseFloat($("#subtotal").val()) + (parseFloat($("#pst").val())/100 * parseFloat($("#subtotal").val())) + (parseFloat($("#gst").val())/100 * parseFloat($("#subtotal").val()))).toFixed(2);
+							$("#data_table_entry").prepend("<?	echo "<tr id=" . "row_" . $i["id"] . ">";
+																					echo "<td>" . $i["invoice_date"] . "</td>";
+																					echo "<td>" . $i["invoice_number"] . "</td>";
+																					echo "<td>" . $i["vendor"] . "</td>";
+																					echo "<td>" . "$" . number_format((float)$i["subtotal"], 2, '.', '') . "</td>";
+																					echo "<td>" . "$" . number_format((float)$i["total"], 2, '.', '') . "</td>";
+																					echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id=" . $i["id"] . ">" . "</td>";
+																					echo "</tr>"; ?>");
 
-								var invoice_num_new = "";
-
-								var invoice_id = "";
-
-
-								<? if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetch()) { ?>
-
-									var invoice_num_new = <? echo $data["invoice_number"]; ?>
-
-									var invoice_id = <? echo $data["id"]; ?>
-
-									<?
-
-										}
-
-										$stmt = null
-
-									?>
-
-								var new_data = JSON.parse(data);
-
-
-
-							$("#data_table_entry").prepend(	"<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" +
-																							"<tr id='row_" + invoice_id + "' class='" + invoice_num_new + "'>" +
-																							"<td>" + new_data.invoice_date + "</td>" +
-																							"<td>" + new_data.invoice_number + "</td>" +
-																							"<td>" + new_data.vendor + "</td>" +
-																							"<td>" + "$" + parseFloat(new_data.subtotal).toFixed(2) + "</td>" +
-																							"<td>" + "$" + total + "</td>" +
-																							"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id='" + invoice_id + "' </form></td>" +
-																										"</tr>"
-																									);
-
-
-
-
-
-							// var total = (parseFloat($("#subtotal").val()) + (parseFloat($("#pst").val())/100 * parseFloat($("#subtotal").val())) + (parseFloat($("#gst").val())/100 * parseFloat($("#subtotal").val()))).toFixed(2);
-							//
-							// var invoice_num_new = "";
-							//
-							// var invoice_id = "";
-
-
-							<? if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetch()) { ?>
-
-								var invoice_num_new = <? echo $data["invoice_number"]; ?>
-
-								var invoice_id = <? echo $data["id"]; ?>
-
-								<? }
-
-								$stmt = null;
-
-								?>
-
-
-
-
-
-
-								// var new_id = parseInt(invoice_id) + 1;
-
-								// if (($("#data_table_entry tr:first").attr("class") != invoice_num_new) && ($("#data_table_entry tr:first").attr("class") != $("#invoice_number").val())) {
-
-
-
-
-								},
-
-								// if (($("#data_table_entry tr:first").attr("class") != invoice_num_new)  && invoice_num_new != $("#invoice_number").val()) {
-
-								// if ($("#data_table_entry tr:first").attr("class") != invoice_num_value) {
-
-									// $("#data_table_entry").prepend(			"<tr id='row_" + invoice_id + "' class='" + invoice_num_new + "'>" +
-									// 																 		"<td>" + $("#invoice_date").val() + "</td>" +
-									// 																		"<td>" + $("#invoice_number").val() + "</td>" +
-									// 																		"<td>" + $("#vendor").val() + "</td>" +
-									// 																		"<td>" + "$" + parseFloat($("#subtotal").val()).toFixed(2) + "</td>" +
-									// 																		"<td>" + "$" + total + "</td>" +
-									// 																		"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id='" + invoice_id + "' </form></td>" +
-									// 																			"</tr>");
-
-
-							// }
-							// else {
-							// 	alert("Invoice number already taken.")
-							// }
-            // error:function(xhr, ajaxOptions, thrownError){
-            //     alert(thrownError);
-            // }
-
+          //   error:function(xhr, ajaxOptions, thrownError){
+          //       alert(thrownError);
+          //   }
+					//
 					// }
 
+				<? }
 
+			}
+				 ?>
 
 				},
 
-			// }).done(function(data) {
-			// 	// debugger
-			// 	alert(data);
-			// 	< $stmt = $sql->prepare("SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1");
-			// 		 $stmt->execute();
-			// 		 $data = $stmt->fetch(PDO::FETCH_ASSOC);>
-			// 			//  debugger
-			//
-			// 		$("#data_table_entry").prepend("<	echo "<tr id=" . "row_" . $data["id"] . ">";
-			// 																echo "<td>" . $data["invoice_date"] . "</td>";
-			// 																echo "<td>" . $data["invoice_number"] . "</td>";
-			// 																echo "<td>" . $data["vendor"] . "</td>";
-			// 																echo "<td>" . "$" . number_format((float)$data["subtotal"], 2, '.', '') . "</td>";
-			// 																echo "<td>" . "$" . number_format((float)$data["total"], 2, '.', '') . "</td>";
-			// 																echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id=" . $data["id"] . ">" . "</td>";
-			// 																echo "</tr>"; >")
-			//
-			// 																<
-			//
-			// 																$stmt = null;
-			//
-			// 																>
+			});
 
-
-			);
-
-
+            });
 
 					$("body").on("click", ".del_button", function(e) {
 			          e.preventDefault();
@@ -469,51 +336,14 @@ $(document).ready(function() {
 			             },
 			             error:function (xhr, ajaxOptions, thrownError){
 			                 alert(thrownError);
-			             },
-
+			             }
 
 
 
 								});
-
 			     });
 
-					//  $("#submit").click(function() {
-						//  debugger
-							//  setTimeout(function() {
-
-																					//  }, 2000);
-
-
-						// < if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetch()) { ?>
-						//
-						// 	var invoice_num_new = < echo $data["invoice_number"]; ?>
-						//
-						// 	var invoice_id = < echo $data["id"]; ?>
-						//
-						// 	< }
-						//
-						// 	$stmt = null;
-						//
-						// 	?
-
-
-
-
-
-
-							// var new_id = parseInt(invoice_id) + 1;
-
-							// if (($("#data_table_entry tr:first").attr("class") != invoice_num_new) && ($("#data_table_entry tr:first").attr("class") != $("#invoice_number").val())) {
-
-
-
-								});
-
-							});
-
-
-
+			 });
 
 </script>
 </html>

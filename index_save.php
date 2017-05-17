@@ -88,6 +88,17 @@ th {
 	border: 2px solid green;
 }
 
+#duplicate_error {
+	float: right;
+	font-size: 15px;
+	color: white;
+	background-color: red;
+	padding: 1px;
+	border-radius: 4px;
+	position: relative;
+	top: 10px;
+}
+
 </style>
 	</head>
 	<body>
@@ -102,7 +113,7 @@ th {
 
 			$vendor_data = "SELECT * FROM `vendors`";
 
-			$invoice_data = "SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1";
+			$invoice_data = "SELECT * FROM `invoices`";
 
 			$last_id = "SELECT `id` FROM `invoices` ORDER BY `id` DESC LIMIT 1";
 
@@ -170,6 +181,8 @@ th {
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
 			<input type="submit" value="Submit" name="submit" id="submit" class="btn btn-primary btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+			<div id="duplicate_error">
+			</div>
     </div>
   </div>
 
@@ -229,7 +242,7 @@ $(document).ready(function() {
 			$stmt = null;
 	?>
 
-	$('#invoice_number').keyup(function(e){
+	$('#invoice_number').change(function(e){
 					e.preventDefault();
 
 		var invoice_num = $('#invoice_number').val();
@@ -241,11 +254,13 @@ $(document).ready(function() {
 		data: $('#collection_form').serialize(),
 		success:function(response){
 			if (response == "duplicate"){
-				$('#invoice_number').change(function(){
-					$(this).addClass("errorClass");
-			});
+					$('#invoice_number').addClass("errorClass");
+					$('#submit').click(function(){
+						$('#duplicate_error').append("<p>Invoice number already taken.</p>");
+					});
 		}
 			else
+					$('#invoice_number').removeClass("errorClass");
 		{
 			// $('#invoice_number').change(function(){
 			// 	$(this).addClass("okClass");
@@ -293,21 +308,14 @@ $(document).ready(function() {
 							// 	var delete_data = "<td><form><input type='submit' value='Delete' id='<echo $data["id"];?>'class='del_button btn btn-danger btn-sm' </form></td>";
 							// <}>
 
-							<?
-									if ($stmt = $sql->prepare($invoice_data) AND $stmt->execute(array()) AND $data = $stmt->fetch()) {
-
-						?>
-													$("#data_table_entry").prepend("<?	echo "<tr id=" . "row_" . $i["id"] . ">";
-																											echo "<td>" . $data["invoice_date"] . "</td>";
-																											echo "<td>" . $data["invoice_number"] . "</td>";
-																											echo "<td>" . $data["vendor"] . "</td>";
-																											echo "<td>" . "$" . number_format((float)$i["subtotal"], 2, '.', '') . "</td>";
-																											echo "<td>" . "$" . number_format((float)$i["total"], 2, '.', '') . "</td>";
-																											echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id=" . $i["id"] . ">" . "</td>";
-																											echo "</tr>"; ?>");
-
-																										}
-							<?
+											$("#data_table_entry").prepend("<tr>" +
+																							"<td>" + $("#invoice_date").val() + "</td>" +
+																							"<td>" + $("#invoice_number").val() + "</td>" +
+																							"<td>" + $("#vendor").val() + "</td>" +
+																							"<td>" + "$" + parseFloat($("#subtotal").val()).toFixed(2) + "</td>" +
+																							"<td>" + "$" + total + "</td>" +
+																							"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' </form></td>" +
+																							"</tr>");
 
             // error:function(xhr, ajaxOptions, thrownError){
             //     alert(thrownError);
