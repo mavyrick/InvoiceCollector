@@ -15,6 +15,7 @@ session_start();
 
 body {
 	font-family: arial;
+	background-color: whitesmoke;
 }
 
 #collection_form {
@@ -45,12 +46,16 @@ body {
 
 #list {
 	padding-top: 25px;
-	padding-right: 3%;
+	margin-right: 3%;
 }
 
 #data_table {
 	border: 1px solid black;
 	display: table-header-group;
+}
+
+#table-background {
+	/*background-color: #d8faff;*/
 }
 
 td {
@@ -59,6 +64,8 @@ td {
 	border: solid lightgrey 1px;
 	vertical-align: middle;
 	text-align: center;
+	background-color: aliceblue;
+
 }
 
 th {
@@ -68,10 +75,11 @@ th {
 	border: solid lightgrey 1px;
 	vertical-align: middle;
 	text-align: center;
+	background-color: lightgrey;
 }
 
 .del_button {
-	margin: 1px;
+	margin: 2px;
 }
 
 #all_invoices {
@@ -135,6 +143,7 @@ th {
 }
 
 .modal-content {
+	background-color: whitesmoke;
 }
 
 .modal-title {
@@ -162,7 +171,7 @@ th {
 }
 
 .vendor_del_button {
-	margin: 1px;
+	margin: 2px;
 }
 
 </style>
@@ -282,11 +291,12 @@ th {
 		<h2 id="all_invoices"><center>All Invoices</center></h2>
 
 		<br>
-
+		<div id="table-background">
 	<table id="data_table" class="table">
 		<div id="data_table_entry">
 		</div>
 	</table>
+</div>
 
 </div>
 
