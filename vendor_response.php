@@ -24,34 +24,20 @@ $sql = get_db_conn();
 // }
 
 
-if(isset($_POST["invoice_date"]) && strlen($_POST["invoice_date"])>0)
-if(isset($_POST["invoice_number"]) && strlen($_POST["invoice_number"])>0)
-if(isset($_POST["vendor"]) && strlen($_POST["vendor"])>0)
-if(isset($_POST["subtotal"]) && strlen($_POST["subtotal"])>0)
-if(isset($_POST["pst"]) && strlen($_POST["pst"])>0)
-if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
+if(isset($_POST["vendor_title"]) && strlen($_POST["vendor_title"])>0)
+if(isset($_POST["address"]) && strlen($_POST["address"])>0)
 {
 
-    $invoice_date_save = filter_var($_POST["invoice_date"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-    $invoice_number_save = filter_var($_POST["invoice_number"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-    $vendor_save = filter_var($_POST["vendor"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-    $subtotal_save = filter_var($_POST["subtotal"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-    $pst_save = filter_var($_POST["pst"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-    $gst_save = filter_var($_POST["gst"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-    $total_save = $subtotal_save + ($pst_save/100 * $subtotal_save) + ($gst_save/100 * $subtotal_save);
+    $vendor_title_save = filter_var($_POST["vendor_title"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+    $address_save = filter_var($_POST["address"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
-    $id_save = null;
-
-    if ($stmt = $sql->prepare("SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1") AND $stmt->execute(array()) AND $data = $stmt->fetch()) {
+    if ($stmt = $sql->prepare("SELECT * FROM `vendors` ORDER BY `id` DESC LIMIT 1") AND $stmt->execute(array()) AND $data = $stmt->fetch()) {
 
       $id_save = $data["id"];
 
         }
 
         $stmt = null;
-
-
-
 
 
   //  {
@@ -74,7 +60,7 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
     //         exit();
     // }
 
-    $insert_row = $sql->query("INSERT INTO `invoices` (invoice_date, invoice_number, vendor, subtotal, pst, gst, total) VALUES ('$invoice_date_save', '$invoice_number_save', '$vendor_save', '$subtotal_save', '$pst_save', '$gst_save', '$total_save')");
+    $insert_row = $sql->query("INSERT INTO `vendors` (vendor_title, address) VALUES ('$vendor_title_save', '$address_save')");
 
     // $stmt->bindParam(":ename", $invoice_date_save);
     // $stmt->bindParam(":edept", $invoice_number_save);
@@ -91,15 +77,10 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
         header('Content-Type: application/json');
 
 
-          echo json_encode(array( 'invoice_date' => $invoice_date_save,
-                                                      'invoice_number' => $invoice_number_save,
-                                                      'vendor' => $vendor_save,
-                                                      'subtotal' => $subtotal_save,
-                                                      'pst' => $pst_save,
-                                                      'gst' => $gst_save,
-                                                      'total' => $total_save,
-                                                      'id' => $id_save,
-                                                    ));
+          echo json_encode(array( 'vendor_title' => $vendor_title_save,
+                                  'address' => $address_save,
+                                  'id' => $id_save,
+                                ));
 
 
         $my_id = $sql->insert_id;
@@ -157,13 +138,13 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
 
     	}
 
-if(isset($_POST["recordToDelete"]) && strlen($_POST["recordToDelete"])>0 && is_numeric($_POST["recordToDelete"]))
+if(isset($_POST["vendorToDelete"]) && strlen($_POST["vendorToDelete"])>0 && is_numeric($_POST["vendorToDelete"]))
 {
 
 
-    $idToDelete = filter_var($_POST["recordToDelete"],FILTER_SANITIZE_NUMBER_INT);
+    $idToDelete = filter_var($_POST["vendorToDelete"],FILTER_SANITIZE_NUMBER_INT);
 
-    $delete_row = $sql->query("DELETE FROM `invoices` WHERE `id` = $idToDelete");
+    $delete_row = $sql->query("DELETE FROM `vendors` WHERE `id` = $idToDelete");
 
     if(!$delete_row)
     {

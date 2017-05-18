@@ -35,16 +35,24 @@
 
 #data_table {
 	border: 1px solid black;
+	display: table-header-group;
 }
 
 td {
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border: solid lightgrey 1px;
+	vertical-align: middle;
+	text-align: center;
 }
 
 th {
-	padding-left: 25px;
-	padding-right: 25px;
+	font-size: 20px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border: solid lightgrey 1px;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .del_button {
@@ -64,4 +72,65 @@ th {
 
 .form-control {
 	width: 80%;
+}
+
+.errorClass {
+	border: 2px solid red;
+}
+
+.okClass {
+	border: 2px solid green;
+}
+
+#error {
+	float: right;
+	font-size: 15px;
+	color: white;
+	background-color: red;
+	padding: 1px;
+	border-radius: 4px;
+	position: relative;
+	top: 10px;
+}
+
+#manage_vendors_position {
+	display: block;
+	position: relative;
+	right: 15px;
+}
+
+#submit_position {
+	display: block;
+	position: relative;
+	left: 7px;
+}
+
+#vendor_table_entry {
+	display: inline-block;
+	height: 250px;
+	width: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: auto;
+}
+
+#myModal {
+}
+
+.modal-content {
+}
+
+.modal-title {
+	display: inline-block;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: gold;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#table-border {
+	display: inline-block;
+	border: solid black 1px;
 }*/

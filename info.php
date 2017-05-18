@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<meta charset="utf-8">
 		<title>Invoice Collector</title>
@@ -120,49 +120,18 @@ th {
 	left: 7px;
 }
 
-#vendor_table_entry {
-	display: inline-block;
-	height: 250px;
-	width: auto;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	margin: auto;
-	border-top: solid lightgrey 1px;
-	border-bottom: solid lightgrey 1px;
+#scroll {
+	height: 200px;
+	width: 500px;
+	overflow: scroll;
 }
 
-#myModal {
-}
-
-.modal-content {
+#my-modal {
+	alignment: center;
 }
 
 .modal-title {
-	display: inline-block;
 	font-size: 30px;
-	font-weight: bold;
-	background-color: paleturquoise ;
-	padding: 10px;
-	border-radius: 10px;
-	text-align: center;
-}
-
-#table-border {
-	display: inline-block;
-	border-top: solid lightgrey 1px;
-	border-bottom: solid lightgrey 1px;
-}
-
-#vendor_table {
-
-}
-
-#vendor_form {
-	font-size: 20px;
-}
-
-.vendor_del_button {
-	margin: 1px;
 }
 
 </style>
@@ -177,16 +146,13 @@ th {
 
 			$sql = get_db_conn();
 
-			$vendor_data = "SELECT * FROM `vendors` ORDER BY `id` ASC";
+			$vendor_data = "SELECT * FROM `vendors`";
 
 			$invoice_data = "SELECT * FROM `invoices` ORDER BY `id` ASC";
 
 			$last_id = "SELECT `id` FROM `invoices` ORDER BY `id` DESC LIMIT 1";
 
 			$last_entry = "SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1";
-
-			$last_entry_vendors = "SELECT * FROM `vendors` ORDER BY `id` DESC LIMIT 1";
-
 
 			// $last_entry = "SELECT * FROM `invoices` where id=(SELECT max(id) FROM `invoices`)";
 
@@ -292,31 +258,32 @@ th {
 <div id="vendor_modal">
 </div>
 
+<!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
+    <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <center><h4 class="modal-title">Manage Vendors</h4></center>
+        <h4 class="modal-title"><center>Manage Vendors</center></h4>
       </div>
       <div class="modal-body">
-
-				<center><table id="vendor_table" class="table">
+				<table id="vendor_table" class="table">
 					<div id="vendor_table_entry">
 					</div>
-
-				</table></center>
+				</table>
+				<div id="#scroll">
 
 				<script>
 				<?
 								if ($stmt = $sql->prepare($vendor_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
 									foreach ($data as $i) {
 				?>
-				$("#vendor_table_entry").prepend("<?	echo "<tr id=" . "vendor_row_" . $i["id"] . ">";
+				$("#vendor_table_entry").prepend("<?	echo "<tr id=" . "row_" . $i["vendor_title"] . ">";
 																		echo "<td>" . $i["vendor_title"] . "</td>";
 																		echo "<td>" . $i["address"] . "</td>";
-																		echo "<td>" . "<input type='submit' value='Delete' class='vendor_del_button btn btn-danger btn-xs' id=" . $i["id"] . ">" . "</td>";
+																		echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-xs' id=" . $i["id"] . ">" . "</td>";
 																		echo "</tr>"; ?>");
 
 				<?
@@ -328,103 +295,40 @@ th {
 
 				?>
 
-				$("#vendor_table_entry").prepend("<tr id='vendor_headers'><th>Vendor</th><th>Address</th><th>Delete</th><div id='before_header'></div>");
+				$("#vendor_table_entry").prepend("<tr id='vendor_headers'><th>Vendor</th><th>Address</th><th>Delete</th></div>");
 
 				</script>
 
-				<form action="vendor_response.php" method="post" name="form" class="form-horizontal" id="vendor_form">
+			</div>
+
+				<form action="vendor_response.php" method="post" name="form" class="form-horizontal" id="collection_form">
 			  <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">Vendor:</label>
 			    <div class="col-sm-10">
-						<input type="text" name="vendor_title" id="vendor_title" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" >
+						<input type="date" name="invoice_date" id="invoice_date" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" >
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="inputPassword3" class="col-sm-2 control-label">Address:</label>
 			    <div class="col-sm-10">
-						<input type="text" name="address" id="address" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+						<input type="text" name="invoice_number" id="invoice_number" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 			    </div>
 			  </div>
 				<div id="submit_position" class="col-sm-6">
 			  <div class="form-group">
 			    <div class=" col-sm-offset-5">
-						<input type="submit" value="Add Vendor" name="submit" id="vendor_submit" class="btn btn-primary btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+						<input type="submit" value="Add Vendor" name="submit" id="submit" class="btn btn-primary btn-md col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 						<div id="error">
 						</div>
 			    </div>
 			  </div>
 			</div>
-		</form>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
-		<script>
-
-		$(document).ready(function() {
-
-		$("#vendor_submit").on("click", function(e){
-            e.preventDefault();
-
-            if(($("#vendor_title").val()==='') || ($("#address").val()===''))
-            {
-                alert("You left a field blank.");
-                return false;
-            };
-
-							$.ajax({
-							type: 'POST',
-							url: 'vendor_response.php',
-							dataType: "text",
-							data: $('#vendor_form').serialize(),
-							success: function(data) {
-
-								$("#vendor_headers").remove();
-
-							var new_vendor_data = JSON.parse(data)
-
-							$("#vendor_table_entry").prepend(	"<tr id='vendor_headers'><th>Vendor</th><th>Address</th><th>Delete</th></tr><div id='before_header'></div>" +
-																								"<tr id='vendor_row_" + new_vendor_data.id + "'>" +
-																								"<td>" + new_vendor_data.vendor_title + "</td>" +
-																								"<td>" + new_vendor_data.address + "</td>" +
-																								"<td><form><input type='submit' value='Delete' class='vendor_del_button btn btn-danger btn-xs' id='" + new_vendor_data.id + "' </form></td>" +
-																								"</tr>"
-																							);
-
-							},
-
-						});
-
-					});
-
-					$("body").on("click", ".vendor_del_button", function(e) {
-			          e.preventDefault();
-			          var DbNumberID = $(this).attr('id');
-			          var myData = "vendorToDelete=" + DbNumberID;
-			         $(this).hide();
-
-			             $.ajax({
-			             type: "POST",
-			             url: "vendor_response.php",
-			             dataType: "text",
-			             data: myData,
-			             success:function(response){
-			                $("#vendor_row_"+DbNumberID).fadeOut();
-			             },
-			             error:function (xhr, ajaxOptions, thrownError){
-			                 alert(thrownError);
-			             },
-
-								});
-
-			     });
-
-				});
-
-		</script>
 
   </div>
 </div>
@@ -458,6 +362,20 @@ $(document).ready(function() {
 
 	$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>");
 
+	// $('#vendor_modal').append('<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div id="contact" class="modal-body"></div></div></div></div>')
+
+// 	$('#manage_vendors').on('click', function(e){
+// 		e.preventDefault();
+// 		$('#myModal').modal('show');
+// 		$.ajax({
+// 			url: "manage_vendors.php",
+// 		}).done(function(data) {
+// 			$("#contact").html(data);
+// 			// $(".navbar:last").remove();
+// 		// });
+// 	});
+// });
+
 	$('#invoice_number').change(function(e){
 					e.preventDefault();
 
@@ -478,10 +396,20 @@ $(document).ready(function() {
 			else
 					$('#invoice_number').removeClass("errorClass");
 		{
-
+			// $('#invoice_number').change(function(){
+			// 	$(this).addClass("okClass");
+			// });
 	};
 },
 
+			// alert(response);
+
+		// var invoice_dup = "<echo $_SESSION["duplicate"];?>";
+		//
+		// if(invoice_dup == "duplicate") {
+		// 	alert("test");
+		// 	$('#invoice_number').addClass('.errorClass');
+// };
 
 		},
 
@@ -496,8 +424,7 @@ $(document).ready(function() {
 
 
 
-            if(($("#invoice_number").val()==='') || ($("#invoice_date").val()==='') || ($("#vendor").val()==='') || ($("#subtotal").val()==='') || ($("#pst").val()==='') ||
-							($("#gst").val()===''))
+            if(($("#invoice_number").val()==='') || ($("#invoice_date").val()==='') || ($("#vendor").val()==='') || ($("#subtotal").val()==='') || ($("#pst").val()==='') || ($("#pst").val()===''))
             {
                 $("#error").append("You left a field blank.");
                 return false;
@@ -542,15 +469,25 @@ $(document).ready(function() {
 
 
 							$("#data_table_entry").prepend(	"<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" +
-																							"<tr id='row_" + new_data.id + "' class='" + invoice_num_new + "'>" +
+																							"<tr id='row_" + invoice_id + "' class='" + invoice_num_new + "'>" +
 																							"<td>" + new_data.invoice_date + "</td>" +
 																							"<td>" + new_data.invoice_number + "</td>" +
 																							"<td>" + new_data.vendor + "</td>" +
 																							"<td>" + "$" + parseFloat(new_data.subtotal).toFixed(2) + "</td>" +
 																							"<td>" + "$" + total + "</td>" +
-																							"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id='" + new_data.id + "' </form></td>" +
+																							"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id='" + invoice_id + "' </form></td>" +
 																										"</tr>"
 																									);
+
+
+
+
+
+							// var total = (parseFloat($("#subtotal").val()) + (parseFloat($("#pst").val())/100 * parseFloat($("#subtotal").val())) + (parseFloat($("#gst").val())/100 * parseFloat($("#subtotal").val()))).toFixed(2);
+							//
+							// var invoice_num_new = "";
+							//
+							// var invoice_id = "";
 
 
 							<? if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetch()) { ?>
@@ -565,12 +502,75 @@ $(document).ready(function() {
 
 								?>
 
+
+
+
+
+
+								// var new_id = parseInt(invoice_id) + 1;
+
+								// if (($("#data_table_entry tr:first").attr("class") != invoice_num_new) && ($("#data_table_entry tr:first").attr("class") != $("#invoice_number").val())) {
+
+
+
+
 								},
+
+								// if (($("#data_table_entry tr:first").attr("class") != invoice_num_new)  && invoice_num_new != $("#invoice_number").val()) {
+
+								// if ($("#data_table_entry tr:first").attr("class") != invoice_num_value) {
+
+									// $("#data_table_entry").prepend(			"<tr id='row_" + invoice_id + "' class='" + invoice_num_new + "'>" +
+									// 																 		"<td>" + $("#invoice_date").val() + "</td>" +
+									// 																		"<td>" + $("#invoice_number").val() + "</td>" +
+									// 																		"<td>" + $("#vendor").val() + "</td>" +
+									// 																		"<td>" + "$" + parseFloat($("#subtotal").val()).toFixed(2) + "</td>" +
+									// 																		"<td>" + "$" + total + "</td>" +
+									// 																		"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id='" + invoice_id + "' </form></td>" +
+									// 																			"</tr>");
+
+
+							// }
+							// else {
+							// 	alert("Invoice number already taken.")
+							// }
+            // error:function(xhr, ajaxOptions, thrownError){
+            //     alert(thrownError);
+            // }
+
+					// }
+
+
 
 				},
 
+			// }).done(function(data) {
+			// 	// debugger
+			// 	alert(data);
+			// 	< $stmt = $sql->prepare("SELECT * FROM `invoices` ORDER BY `id` DESC LIMIT 1");
+			// 		 $stmt->execute();
+			// 		 $data = $stmt->fetch(PDO::FETCH_ASSOC);>
+			// 			//  debugger
+			//
+			// 		$("#data_table_entry").prepend("<	echo "<tr id=" . "row_" . $data["id"] . ">";
+			// 																echo "<td>" . $data["invoice_date"] . "</td>";
+			// 																echo "<td>" . $data["invoice_number"] . "</td>";
+			// 																echo "<td>" . $data["vendor"] . "</td>";
+			// 																echo "<td>" . "$" . number_format((float)$data["subtotal"], 2, '.', '') . "</td>";
+			// 																echo "<td>" . "$" . number_format((float)$data["total"], 2, '.', '') . "</td>";
+			// 																echo "<td>" . "<input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id=" . $data["id"] . ">" . "</td>";
+			// 																echo "</tr>"; >")
+			//
+			// 																<
+			//
+			// 																$stmt = null;
+			//
+			// 																>
+
 
 			);
+
+
 
 					$("body").on("click", ".del_button", function(e) {
 			          e.preventDefault();
@@ -590,13 +590,51 @@ $(document).ready(function() {
 			                 alert(thrownError);
 			             },
 
+
+
+
 								});
 
 			     });
 
+					//  $("#submit").click(function() {
+						//  debugger
+							//  setTimeout(function() {
+
+																					//  }, 2000);
+
+
+						// < if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetch()) { ?>
+						//
+						// 	var invoice_num_new = < echo $data["invoice_number"]; ?>
+						//
+						// 	var invoice_id = < echo $data["id"]; ?>
+						//
+						// 	< }
+						//
+						// 	$stmt = null;
+						//
+						// 	?
+
+
+
+
+
+
+							// var new_id = parseInt(invoice_id) + 1;
+
+							// if (($("#data_table_entry tr:first").attr("class") != invoice_num_new) && ($("#data_table_entry tr:first").attr("class") != $("#invoice_number").val())) {
+
+
+
 								});
 
+
+
 							});
+
+
+
 
 </script>
 </html>

@@ -317,11 +317,6 @@ $(document).ready(function() {
 																							"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' </form></td>" +
 																							"</tr>");
 
-            // error:function(xhr, ajaxOptions, thrownError){
-            //     alert(thrownError);
-            // }
-
-					// }
 
 				},
 
