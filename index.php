@@ -417,7 +417,7 @@ session_start();
 							e.preventDefault();
 							var DbNumberID = $(this).attr('id');
 							var myData = "vendorToDelete=" + DbNumberID;
-							$(this).hide();
+							$(this).remove();
 
 							$.ajax({
 								type: "POST",
@@ -426,7 +426,7 @@ session_start();
 								data: myData,
 								success:function(response){
 									$("#vendor_row_"+DbNumberID).fadeOut();
-									$("#vendor_del_"+DbNumberID).remove()
+									// $("#vendor_del_"+DbNumberID).remove()
 								},
 								error:function (xhr, ajaxOptions, thrownError){
 									alert(thrownError);
@@ -566,49 +566,36 @@ session_start();
 					"</tr>"
 				);
 
-
-				<? if ($stmt = $sql->prepare($last_entry) AND $stmt->execute(array()) AND $data = $stmt->fetch()) { ?>
-
-					var invoice_num_new = <? echo $data["invoice_number"]; ?>
-
-					var invoice_id = <? echo $data["id"]; ?>
-
-					<? }
-
-					$stmt = null;
-
-					?>
-
-				},
-
 			},
 
+		},
 
-		);
 
-		$("body").on("click", ".del_button", function(e) {
-			e.preventDefault();
-			var DbNumberID = $(this).attr('id');
-			var myData = "recordToDelete=" + DbNumberID;
-			$(this).hide();
+	);
 
-			$.ajax({
-				type: "POST",
-				url: "response.php",
-				dataType: "text",
-				data: myData,
-				success:function(response){
-					$("#row_"+DbNumberID).fadeOut();
-				},
-				error:function (xhr, ajaxOptions, thrownError){
-					alert(thrownError);
-				},
+});
 
-			});
+$("body").on("click", ".del_button", function(e) {
+	e.preventDefault();
+	var DbNumberID = $(this).attr('id');
+	var myData = "recordToDelete=" + DbNumberID;
+	$(this).remove();
 
-		});
+	$.ajax({
+		type: "POST",
+		url: "delete_response.php",
+		dataType: "text",
+		data: myData,
+		success:function(response){
+			$("#row_"+DbNumberID).fadeOut();
+		},
+		error:function (xhr, ajaxOptions, thrownError){
+			alert(thrownError);
+		},
 
 	});
+
+});
 
 });
 

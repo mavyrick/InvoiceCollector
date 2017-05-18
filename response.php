@@ -157,21 +157,32 @@ if(isset($_POST["gst"]) && strlen($_POST["gst"])>0)
 
 }
 
-if(isset($_POST["recordToDelete"]) && strlen($_POST["recordToDelete"])>0 && is_numeric($_POST["recordToDelete"]))
-{
-
-
-  $idToDelete = filter_var($_POST["recordToDelete"],FILTER_SANITIZE_NUMBER_INT);
-
-  $delete_row = $sql->query("DELETE FROM `invoices` WHERE `id` = $idToDelete");
-
-  if(!$delete_row)
-  {
-
-    header('HTTP/1.1 500 Could not delete record!');
-    exit();
-
-  }
-
-}
+// if(isset($_POST["recordToDelete"]) && strlen($_POST["recordToDelete"])>0 && is_numeric($_POST["recordToDelete"]))
+// {
+//
+//
+//   $idToDelete = filter_var($_POST["recordToDelete"],FILTER_SANITIZE_NUMBER_INT);
+//
+//   $delete_row = $sql->query("DELETE FROM `invoices` WHERE `id` = $idToDelete");
+//
+//   if($delete_row) {
+//     echo json_encode(array( 'invoice_date' => $invoice_date_save,
+//     'invoice_number' => $invoice_number_save,
+//     'vendor' => $vendor_save,
+//     'subtotal' => $subtotal_save,
+//     'pst' => $pst_save,
+//     'gst' => $gst_save,
+//     'total' => $total_save,
+//     'id' => $id_save,
+//   ));
+//   }
+//   else
+//   {
+//
+//     header('HTTP/1.1 500 Could not delete record!');
+//     exit();
+//
+//   }
+//
+// }
 ?>
