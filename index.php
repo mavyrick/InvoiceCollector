@@ -141,7 +141,7 @@ th {
 	display: inline-block;
 	font-size: 30px;
 	font-weight: bold;
-	background-color: paleturquoise ;
+	background-color: lightblue;
 	padding: 10px;
 	border-radius: 10px;
 	text-align: center;
