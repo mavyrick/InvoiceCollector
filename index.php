@@ -373,10 +373,6 @@ session_start();
 							</div>
 						</div>
 
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="blank">
-							<span aria-hidden="true">"You left a field blank."</span>
-						</button>
-
 						<script>
 
 						$(document).ready(function() {
@@ -386,9 +382,7 @@ session_start();
 
 								if(($("#vendor_title").val()==='') || ($("#address").val()===''))
 								{
-									$("#blank").alert('close.bs.alert', function(){
-										"test"
-									});
+									alert('You left a field blank');
 									return false;
 								};
 
@@ -609,7 +603,7 @@ session_start();
 				error:function (xhr, ajaxOptions, thrownError){
 					alert(thrownError);
 				},
-				
+
 			});
 
 		});
