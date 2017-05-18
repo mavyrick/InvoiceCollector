@@ -218,12 +218,13 @@ th {
 	<div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">Vendor:</label>
     <div class="col-sm-10">
-			<select name="vendor" id="vendor" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+			<select name="vendor" id="vendor-list" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+
 <?
 				if ($stmt = $sql->prepare($vendor_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
 					foreach ($data as $i) {
 ?>
-						<option name=<? echo $i["vendor_title"]?>><? echo $i["vendor_title"] ?></option>;
+						<option name=<? echo $i["vendor_title"]; ?> id="vendor_del_<? echo $i["id"]; ?>"><? echo $i["vendor_title"]; ?></option>
 <?
 					}
 				}
@@ -394,6 +395,8 @@ th {
 																								"</tr>"
 																							);
 
+							$("#vendor-list").append("<option name='" + new_vendor_data.vendor_title + " id='vendor_del_" + new_vendor_data.id + "'>" + new_vendor_data.vendor_title + "</option>");
+
 							},
 
 						});
@@ -413,6 +416,7 @@ th {
 			             data: myData,
 			             success:function(response){
 			                $("#vendor_row_"+DbNumberID).fadeOut();
+											$("#vendor_del_"+DbNumberID).remove()
 			             },
 			             error:function (xhr, ajaxOptions, thrownError){
 			                 alert(thrownError);
