@@ -10,7 +10,8 @@ session_start();
 	<meta charset="utf-8">
 	<title>Invoice Collector</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<style>
 
 	body {
@@ -107,14 +108,15 @@ session_start();
 	}
 
 	#error {
-		float: right;
+		/*float: right;*/
 		font-size: 15px;
 		color: white;
 		background-color: red;
-		padding: 1px;
+		padding: 5px;
 		border-radius: 4px;
-		position: relative;
-		top: 10px;
+		display: none;
+		/*position: relative;*/
+		/*top: 10px;*/
 	}
 
 	#manage_vendors_position {
@@ -328,8 +330,8 @@ session_start();
 							<div class="form-group">
 								<div class=" col-sm-offset-5">
 									<input type="submit" value="Submit" name="submit" id="submit" class="btn btn-primary btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-									<div id="error">
-									</div>
+									<!-- <div id="error">
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -337,11 +339,11 @@ session_start();
 							<div class="form-group">
 								<div class="col-sm-8">
 									<input type="button" value="Manage Vendors" name="manage_vendors" id="manage_vendors" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
-									<div id="error">
-									</div>
 								</div>
 							</div>
 						</div>
+						<center><span id="error">
+						</span></center>
 
 					</form>
 
@@ -842,7 +844,12 @@ $(document).ready(function() {
 				if (response == "duplicate"){
 					$('#invoice_number').addClass("errorClass");
 					$('#submit').click(function(){
-						$('#error').append("<p>Invoice number already taken.</p>");
+						$("#error").empty();
+						$("#error").show();
+						$('#error').append("Invoice number already taken.");
+						setTimeout(function() {
+							$('#error').hide();
+						}, 5000);
 					});
 				}
 				else
@@ -864,17 +871,26 @@ $(document).ready(function() {
 $("#submit").on("click", function(e){
 	e.preventDefault();
 
-
-
 	if(($("#invoice_number").val()==='') || ($("#invoice_date").val()==='') || ($("#vendor").val()==='') || ($("#subtotal").val()==='') || ($("#pst").val()==='') ||
 	($("#gst").val()===''))
 	{
+		$("#error").empty();
+		$("#error").show();
 		$("#error").append("You left a field blank.");
+		setTimeout(function() {
+			$('#error').hide();
+		}, 5000);
 		return false;
 	};
 
 	if($("#invoice_number").val().length != 5) {
+		// $("#error").empty();
+		$("#error").empty();
+		$("#error").show();
 		$("#error").append("Invoice number must have five digits.");
+		setTimeout(function() {
+			$('#error').hide();
+		}, 5000);
 	}
 
 	var invoice_num = $('#invoice_number').val();
