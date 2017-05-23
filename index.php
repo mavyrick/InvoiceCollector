@@ -237,6 +237,48 @@ session_start();
 		border-radius: 15px;
 	}
 
+	#collector {
+    width: 35px;
+		height: 440px;
+	}
+
+	#collector.in {
+    width: 35%;
+	}
+
+	#collector {
+    -webkit-transition: width 0.75s ease;
+    -moz-transition: width 0.75s ease;
+    -o-transition: width 0.75s ease;
+    transition: width 0.75s ease;
+
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+	}
+
+	.table_size {
+		width: 200px;
+	}
+
+	.list_size {
+		margin-left: 9%;
+	}
+
+	#collapse-button {
+		color: black;
+		width: 10px;
+		height: 75px;
+		position: relative;
+		top: 170px;
+		left: 10px;
+		z-index:+1;
+		outline: 0;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+
 	</style>
 </head>
 <body>
@@ -270,9 +312,29 @@ session_start();
 
 	<h1 id="title"><center>Invoice Collector</center></h1>
 
+	<script>
+
+	$(document).ready(function() {
+
+		$("[data-toggle='toggle']").click(function() {
+			var selector = $(this).data("target");
+			$(selector).toggleClass('in');
+			setTimeout(function() {
+				$('#collection_form').toggle();
+				$('#invoice_title').toggle();
+			}, 750);
+			$("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
+			$("#data_table_entry td").toggleClass("table_size");
+			$("#list").toggleClass("list_size");
+		});
+	});
+
+	</script>
 
 
-	<div id="collector" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+	<div id="collector" class="collapse in col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+		<button id="collapse-button" type="button" class="btn btn-danger pull-right glyphicon glyphicon-option-vertical" data-toggle="toggle" data-target="#collector"></button>
 
 		<h2 id="invoice_title"><center>Enter an Invoice</center><h2>
 
@@ -286,7 +348,7 @@ session_start();
 				<div class="form-group">
 					<label for="inputPassword3" class="col-sm-2 control-label">Number:</label>
 					<div class="col-sm-10">
-						<input type="text" name="invoice_number" id="invoice_number" placeholder="must contain five digits" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+						<input type="text" name="invoice_number" id="invoice_number" placeholder="must contain five digits" maxlength="5" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 					</div>
 				</div>
 				<div class="form-group">
@@ -331,133 +393,133 @@ session_start();
 								<div class=" col-sm-offset-5">
 									<input type="submit" value="Submit" name="submit" id="submit" class="btn btn-primary btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 									<!-- <div id="error">
-									</div> -->
-								</div>
+								</div> -->
 							</div>
 						</div>
-						<div id="manage_vendors_position" class="col-sm-6">
-							<div class="form-group">
-								<div class="col-sm-8">
-									<input type="button" value="Manage Vendors" name="manage_vendors" id="manage_vendors" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
-								</div>
+					</div>
+					<div id="manage_vendors_position" class="col-sm-6">
+						<div class="form-group">
+							<div class="col-sm-8">
+								<input type="button" value="Manage Vendors" name="manage_vendors" id="manage_vendors" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
 							</div>
 						</div>
-						<center><span id="error">
-						</span></center>
+					</div>
+					<center><span id="error">
+					</span></center>
 
-					</form>
+				</form>
 
-				</div>
+			</div>
 
-				<div id="list" class="col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">
+			<div id="list" class="col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">
 
-					<center><h2 id="all_invoices">All Invoices</h2></center>
+				<center><h2 id="all_invoices">All Invoices</h2></center>
 
-					<div class="" id="search_form_wrapper">
-						<center>
-							<form action="" method="post" name="search_form" id="search_form" class="form-inline">
-								<!-- <div class="row"> -->
-								<div class="col-sm-12">
-									<div class="form-group">
-										<!-- <div class="input-group input-group-sm"> -->
-										<!-- <div class="input-group search-input"> -->
-										<!-- <div class="form-group"> -->
-										<select name="search-by" id="search-by" class="form-control">
-											<option disabled>Search by:</option>
-											<option name="search_invoice_number" id="search_invoice_number">Invoice Number</option>
-											<option name="search_vendor" id="search_vendor">Vendor</option>
-											<option name="search_date" id="search_date">Date</option>
-										</select>
-									</div>
-									<!-- </div> -->
+				<div class="" id="search_form_wrapper">
+					<center>
+						<form action="" method="post" name="search_form" id="search_form" class="form-inline">
+							<!-- <div class="row"> -->
+							<div class="col-sm-12">
+								<div class="form-group">
+									<!-- <div class="input-group input-group-sm"> -->
 									<!-- <div class="input-group search-input"> -->
 									<!-- <div class="form-group"> -->
-									<div class="form-group">
-
-										<input type="text" name="search-field" id="search-field" class="form-control" >
-
-										<!-- </div> -->
-									</div>
-									<div class="form-group">
-										<select name="hidden_vendors" id="hidden_vendors" class="form-control">
-
-											<?
-											if ($stmt = $sql->prepare($vendor_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
-												foreach ($data as $i) {
-													?>
-													<option name=<? echo $i["vendor_title"]; ?> id="vendor_del_<? echo $i["id"]; ?>"><? echo $i["vendor_title"]; ?></option>
-													<?
-												}
-											}
-
-											$stmt = null;
-											?>
-										</select>
-									</div>
-									<div class="form-group">
-
-										<input type="date" name="date_field_1" id="date_field_1" class="form-control date_fields">
-
-										<!-- </div> -->
-									</div>
-									<span class="date_fields" id="to"><strong>to</strong></span>
-									<div class="form-group">
-
-										<input type="date" name="date_field_2" id="date_field_2" class="form-control date_fields">
-
-										<!-- </div> -->
-									</div>
-									<div class="form-group">
-										<input type="submit" value="Search" name="search" id="search_button" class="btn btn-info">
-									</div>
-									<div class="form-group">
-										<input type="submit" value="Back" name="back" id="back_button" class="btn btn-warning">
-									</div>
+									<select name="search-by" id="search-by" class="form-control">
+										<option disabled>Search by:</option>
+										<option name="search_invoice_number" id="search_invoice_number">Invoice Number</option>
+										<option name="search_vendor" id="search_vendor">Vendor</option>
+										<option name="search_date" id="search_date">Date</option>
+									</select>
 								</div>
-							</form>
-						</center>
-					</div>
+								<!-- </div> -->
+								<!-- <div class="input-group search-input"> -->
+								<!-- <div class="form-group"> -->
+								<div class="form-group">
 
-					<!-- <div class="container">
-					<div class="col-sm-12 pull-center">
-					<center>
-					<form action="search.php" method="post" name="search_form" id="search_form" class="form-inline">
-					<div class="col-sm-5">
-					<select name="search-by" id="search-by" class="form-control">
-					<option disabled>Search by:</option>
-					<option name="search_invoice_number" id="search_invoice_number">Invoice Number</option>
-					<option name="search_vendor" id="search_vendor">Vendor</option>
-					<option name="search_date" id="search_date">Date</option>
+									<input type="text" name="search-field" id="search-field" class="form-control" >
 
-				</select>
-			</div>
-			<div class="form-group input-group custom-search-form">
-			<! <div class="col-sm-10"> -->
-			<!-- <input type="text" name="search-field" id="search-field" class="form-control col-sm-5" > -->
-			<!-- </div> -->
-			<!-- </div> -->
-			<!-- <div id="search_position" class="col-sm-6"> -->
-			<!-- <div class="form-group"> -->
-			<!-- <div class="2"> -->
-			<!-- <input type="submit" value="Search" name="search" id="search_button" class="btn btn-info btn-md col-sm-2 pull-right"> -->
-			<!-- </div> -->
-			<!-- </div> -->
-			<!-- <select name="hidden_vendors" id="hidden_vendors" class="form-control col-sm-5"> -->
-			<!--
-			<
-			if ($stmt = $sql->prepare($vendor_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
-			foreach ($data as $i) {
-			>
-			<option name=< echo $i["vendor_title"]; ?> id="vendor_del_< echo $i["id"]; ?>">< echo $i["vendor_title"]; ></option>
-			<
-		}
-	} -->
+									<!-- </div> -->
+								</div>
+								<div class="form-group">
+									<select name="hidden_vendors" id="hidden_vendors" class="form-control">
 
-	<!-- $stmt = null; -->
+										<?
+										if ($stmt = $sql->prepare($vendor_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
+											foreach ($data as $i) {
+												?>
+												<option name=<? echo $i["vendor_title"]; ?> id="vendor_del_<? echo $i["id"]; ?>"><? echo $i["vendor_title"]; ?></option>
+												<?
+											}
+										}
+
+										$stmt = null;
+										?>
+									</select>
+								</div>
+								<div class="form-group">
+
+									<input type="date" name="date_field_1" id="date_field_1" class="form-control date_fields">
+
+									<!-- </div> -->
+								</div>
+								<span class="date_fields" id="to"><strong>to</strong></span>
+								<div class="form-group">
+
+									<input type="date" name="date_field_2" id="date_field_2" class="form-control date_fields">
+
+									<!-- </div> -->
+								</div>
+								<div class="form-group">
+									<input type="submit" value="Search" name="search" id="search_button" class="btn btn-info">
+								</div>
+								<div class="form-group">
+									<input type="submit" value="Back" name="back" id="back_button" class="btn btn-warning">
+								</div>
+							</div>
+						</form>
+					</center>
+				</div>
+
+				<!-- <div class="container">
+				<div class="col-sm-12 pull-center">
+				<center>
+				<form action="search.php" method="post" name="search_form" id="search_form" class="form-inline">
+				<div class="col-sm-5">
+				<select name="search-by" id="search-by" class="form-control">
+				<option disabled>Search by:</option>
+				<option name="search_invoice_number" id="search_invoice_number">Invoice Number</option>
+				<option name="search_vendor" id="search_vendor">Vendor</option>
+				<option name="search_date" id="search_date">Date</option>
+
+			</select>
+		</div>
+		<div class="form-group input-group custom-search-form">
+		<! <div class="col-sm-10"> -->
+		<!-- <input type="text" name="search-field" id="search-field" class="form-control col-sm-5" > -->
+		<!-- </div> -->
+		<!-- </div> -->
+		<!-- <div id="search_position" class="col-sm-6"> -->
+		<!-- <div class="form-group"> -->
+		<!-- <div class="2"> -->
+		<!-- <input type="submit" value="Search" name="search" id="search_button" class="btn btn-info btn-md col-sm-2 pull-right"> -->
+		<!-- </div> -->
+		<!-- </div> -->
+		<!-- <select name="hidden_vendors" id="hidden_vendors" class="form-control col-sm-5"> -->
+		<!--
+		<
+		if ($stmt = $sql->prepare($vendor_data) AND $stmt->execute(array()) AND $data = $stmt->fetchAll()) {
+		foreach ($data as $i) {
+		>
+		<option name=< echo $i["vendor_title"]; ?> id="vendor_del_< echo $i["id"]; ?>">< echo $i["vendor_title"]; ></option>
+		<
+	}
+} -->
+
+<!-- $stmt = null; -->
 
 
-	<!-- ? -->
-	<!-- </select>
+<!-- ? -->
+<!-- </select>
 
 </div>
 </form>
@@ -539,35 +601,19 @@ $(document).ready(function() {
 					}
 
 					$("#all_invoices").text("Search Results");
-					$("#all_invoices").css("background-color", "lightsteelblue");
 
-					// $("#all_invoices").hide();
+					$("#all_invoices").css("background-color", "lightsteelblue");
 
 					$("#data_table_entry").children().remove();
 
 					$("#vendor_headers").remove();
 
-					// var search_data = JSON.parse(data);
-
 					$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" + data);
-
-					// $("#data_table_entry").prepend(
-					// 	"<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" +
-					// 	"<tr id='row_" + search_data.id + "' class='" + search_data.id + "'>" +
-					// 	"<td>" + search_data.invoice_date + "</td>" +
-					// 	"<td>" + search_data.invoice_number + "</td>" +
-					// 	"<td>" + search_data.vendor + "</td>" +
-					// 	"<td>" + "$" + parseFloat(search_data.subtotal).toFixed(2) + "</td>" +
-					// 	"<td>" + "$" + search_data.total + "</td>" +
-					// 	"<td><form><input type='submit' value='Delete' class='del_button btn btn-danger btn-sm' id='" + search_data.id + "' </form></td>" +
-					// 	"</tr>"
-					// );
 
 				},
 
 			});
 
-			// };
 		}
 		else if ($("#search-by").val() === 'Vendor') {
 
@@ -830,6 +876,8 @@ $(document).ready(function() {
 
 	$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>");
 
+	$("#data_table_entry").hide().fadeIn();
+
 	$('#invoice_number').change(function(e){
 		e.preventDefault();
 
@@ -843,7 +891,8 @@ $(document).ready(function() {
 			success:function(response){
 				if (response == "duplicate"){
 					$('#invoice_number').addClass("errorClass");
-					$('#submit').click(function(){
+
+					$('#submit').on("click", function(){
 						$("#error").empty();
 						$("#error").show();
 						$('#error').append("Invoice number already taken.");
@@ -852,9 +901,8 @@ $(document).ready(function() {
 						}, 5000);
 					});
 				}
-				else
-				$('#invoice_number').removeClass("errorClass");
-				{
+				else {
+					$('#invoice_number').removeClass("errorClass");
 
 				};
 			},
