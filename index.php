@@ -238,24 +238,24 @@ session_start();
 	}
 
 	#collector {
-    width: 35px;
+		width: 35px;
 		height: 440px;
 	}
 
 	#collector.in {
-    width: 35%;
+		width: 35%;
 	}
 
 	#collector {
-    -webkit-transition: width 0.75s ease;
-    -moz-transition: width 0.75s ease;
-    -o-transition: width 0.75s ease;
-    transition: width 0.75s ease;
+		-webkit-transition: width 0.75s ease;
+		-moz-transition: width 0.75s ease;
+		-o-transition: width 0.75s ease;
+		transition: width 0.75s ease;
 
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: middle;
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		vertical-align: middle;
 	}
 
 	.table_size {
