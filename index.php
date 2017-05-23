@@ -537,7 +537,7 @@ $(document).ready(function() {
 					}
 
 					$("#all_invoices").text("Search Results");
-					$("#all_invoices").css("background-color", "aquamarine");
+					$("#all_invoices").css("background-color", "lightsteelblue");
 
 					// $("#all_invoices").hide();
 
@@ -581,7 +581,7 @@ $(document).ready(function() {
 					}
 
 					$("#all_invoices").text("Search Results");
-					$("#all_invoices").css("background-color", "aquamarine");
+					$("#all_invoices").css("background-color", "lightsteelblue");
 
 
 					// $("#all_invoices").hide();
@@ -612,7 +612,7 @@ $(document).ready(function() {
 					}
 
 					$("#all_invoices").text("Search Results");
-					$("#all_invoices").css("background-color", "aquamarine");
+					$("#all_invoices").css("background-color", "lightsteelblue");
 
 					// $("#all_invoices").hide();
 
@@ -630,9 +630,9 @@ $(document).ready(function() {
 
 	});
 
-		// $("#back_button").on("click", function(e){
-		// 	e.preventDefault();
-		// 	$("#all_invoices").text("All Invoices");
+	// $("#back_button").on("click", function(e){
+	// 	e.preventDefault();
+	// 	$("#all_invoices").text("All Invoices");
 
 	// });
 
