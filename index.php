@@ -588,8 +588,8 @@ $(document).ready(function() {
 			}
 			else
 			{
-				$("#data_table_entry td").toggleClass("table_size");
-				$("#list").toggleClass("list_size");
+				$("#data_table_entry td").addClass("table_size");
+				$("#list").addClass("list_size");
 				// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
 			};
 
@@ -624,8 +624,8 @@ $(document).ready(function() {
 					}
 					else
 					{
-						$("#data_table_entry td").toggleClass("table_size");
-						$("#list").toggleClass("list_size");
+						$("#data_table_entry td").addClass("table_size");
+						$("#list").addClass("list_size");
 						// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
 					};
 
@@ -665,8 +665,8 @@ $(document).ready(function() {
 					}
 					else
 					{
-						$("#data_table_entry td").toggleClass("table_size");
-						$("#list").toggleClass("list_size");
+						$("#data_table_entry td").addClass("table_size");
+						$("#list").addClass("list_size");
 						// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
 					};
 
@@ -715,8 +715,8 @@ $(document).ready(function() {
 					}
 					else
 					{
-						$("#data_table_entry td").toggleClass("table_size");
-						$("#list").toggleClass("list_size");
+						$("#data_table_entry td").addClass("table_size");
+						$("#list").addClass("list_size");
 						// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
 					};
 
