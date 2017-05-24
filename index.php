@@ -238,24 +238,24 @@ session_start();
 	}
 
 	#collector {
-		width: 35px;
+    width: 35px;
 		height: 440px;
 	}
 
 	#collector.in {
-		width: 35%;
+    width: 35%;
 	}
 
 	#collector {
-		-webkit-transition: width 0.75s ease;
-		-moz-transition: width 0.75s ease;
-		-o-transition: width 0.75s ease;
-		transition: width 0.75s ease;
+    -webkit-transition: width 0.75s ease;
+    -moz-transition: width 0.75s ease;
+    -o-transition: width 0.75s ease;
+    transition: width 0.75s ease;
 
-		display: inline-block;
-		overflow: hidden;
-		white-space: nowrap;
-		vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
 	}
 
 	.table_size {
@@ -584,6 +584,14 @@ $(document).ready(function() {
 
 			$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>");
 
+			if ($("#collector").hasClass("in")) {
+			}
+			else
+			{
+				$("#data_table_entry td").toggleClass("table_size");
+				$("#list").toggleClass("list_size");
+				// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
+			};
 
 		});
 
@@ -595,6 +603,8 @@ $(document).ready(function() {
 				dataType: "text",
 				data: $('#search_form').serialize(),
 				success: function(data) {
+
+
 
 					if(data.length == 0) {
 						$("#no_results").append("no results found");
@@ -609,6 +619,15 @@ $(document).ready(function() {
 					$("#vendor_headers").remove();
 
 					$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" + data);
+
+					if ($("#collector").hasClass("in")) {
+					}
+					else
+					{
+						$("#data_table_entry td").toggleClass("table_size");
+						$("#list").toggleClass("list_size");
+						// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
+					};
 
 				},
 
@@ -624,6 +643,8 @@ $(document).ready(function() {
 				data: $('#hidden_vendors').serialize(),
 				success: function(data) {
 
+
+
 					if(data.length == 0) {
 						$("#no_results").append("no results found");
 					}
@@ -639,6 +660,15 @@ $(document).ready(function() {
 					$("#vendor_headers").remove();
 
 					$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" + data);
+
+					if ($("#collector").hasClass("in")) {
+					}
+					else
+					{
+						$("#data_table_entry td").toggleClass("table_size");
+						$("#list").toggleClass("list_size");
+						// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
+					};
 
 				},
 
@@ -648,12 +678,23 @@ $(document).ready(function() {
 
 		else if ($("#search-by").val() === 'Date') {
 
+			if ($("#collector").hasClass("in")) {
+			}
+			else
+			{
+				$("#data_table_entry td").toggleClass("table_size");
+				$("#list").toggleClass("list_size");
+				// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
+			};
+
 			$.ajax({
 				type: 'POST',
 				url: 'search_date.php',
 				dataType: "text",
 				data: 'date_field_1=' + $('#date_field_1').val() + '&date_field_2=' + $('#date_field_2').val(),
 				success: function(data) {
+
+
 
 					if(data.length == 0) {
 						$("#no_results").append("no results found");
@@ -669,6 +710,15 @@ $(document).ready(function() {
 					$("#vendor_headers").remove();
 
 					$("#data_table_entry").prepend("<tr id='headers'><th>Date</th><th>Number</th><th>Vendor</th><th>Subtotal</th><th>Total</th><th>Delete</th></tr><div id='before_header'></div>" + data);
+
+					if ($("#collector").hasClass("in")) {
+					}
+					else
+					{
+						$("#data_table_entry td").toggleClass("table_size");
+						$("#list").toggleClass("list_size");
+						// $("#list").toggleClass("col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5");
+					};
 
 				},
 
