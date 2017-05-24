@@ -238,24 +238,24 @@ session_start();
 	}
 
 	#collector {
-    width: 35px;
+		width: 35px;
 		height: 440px;
 	}
 
 	#collector.in {
-    width: 35%;
+		width: 35%;
 	}
 
 	#collector {
-    -webkit-transition: width 0.75s ease;
-    -moz-transition: width 0.75s ease;
-    -o-transition: width 0.75s ease;
-    transition: width 0.75s ease;
+		-webkit-transition: width 0.75s ease;
+		-moz-transition: width 0.75s ease;
+		-o-transition: width 0.75s ease;
+		transition: width 0.75s ease;
 
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: middle;
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		vertical-align: middle;
 	}
 
 	.table_size {
@@ -348,7 +348,7 @@ session_start();
 				<div class="form-group">
 					<label for="inputPassword3" class="col-sm-2 control-label">Number:</label>
 					<div class="col-sm-10">
-						<input type="text" name="invoice_number" id="invoice_number" placeholder="must contain five digits" maxlength="5" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+						<input type="text" name="invoice_number" id="invoice_number" maxlength="5" class="form-control col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 					</div>
 				</div>
 				<div class="form-group">
